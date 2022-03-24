@@ -1,116 +1,166 @@
-#main-nav {
-    position: fixed;
-    background: white;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 70px;
-    box-shadow: 0 1px 5px gray;
+
+     /* UTILITIES */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
-#main-nav ul {
-    list-style-type: none;
-    margin-right:2.5%;  
+body {
+ font-family: roboto,'sans serif';
 }
-#main-nav ul li {
-    display: inline-block;
-    padding: 10px;
-    font-family: roboto,'sans serif';
-    text-transform: uppercase;
-    font-size:14px;
-    line-height:55px;
-    letter-spacing: 1px;
+a {
+ text-decoration: none;
 }
-#main-nav ul li a {
-    text-decoration: none;
-    color:black;
+li {
+ list-style: none;
 }
-#main-nav ul li a:active {
-    text-decoration: underline;
-    color:darkred;
+/* NAVBAR STYLING STARTS */
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ text-transform: uppercase;
+ padding: 16px;
+ font-weight: bold;
+ background-color: white;
+ box-shadow: 0 1px 5px gray;
+ color:black;
 }
-#main-nav ul li a:hover {
+.nav-links a {
+ color: black;
+}
+
+.nav-links a:hover{
     color: darkred;
 }
-.main-navlinks {
-    float:left;
-    padding: 25px;
-    font-weight: bold;
-    margin-left: 35px;
+
+.nav-links a:active{
+    color: darkred;
+    text-decoration: underline;
+    
 }
+
+/* LOGO */
+.logo {
+ font-size: 32px;
+    margin-left: 30px;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 16px;
+ letter-spacing: 1px;
+}
+
+.menu li {
+ padding: 5px 14px;
+}
+
+.image{
+    margin-right: 20px;
+}
+
+/* DROPDOWN MENU */
+.services {
+ position: relative; 
+}
+
+.dropdown {
+ background-color: white;
+ padding: 1em 0;
+ position: absolute;
+ display: none;
+ border-radius: 8px;
+ top: 27px;
+ box-shadow: 0 1px 5px gray;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 9em;
+ text-align: center;
+}
+.dropdown li:hover {
+ color: darkred;
+}
+.services:hover .dropdown {
+ display: 
+ block;
+}
+/*Button*/
 .btn-outline-dark {
+    margin-top: -10px;
+    margin-bottom: -10px;
     border-radius: 30px;
     border: 2px solid black;
-    padding: 0.5px 30px;
     font-family: roboto, 'sans serif';
     font-weight:bold;
     font-size:16px;
     background:white;
     text-transform: uppercase;
-    height: 50px;
-    width: 100px;
-    text-align: center;  
-
+    height: 42px;
+    width: 84px; 
+    
 }
-
-#margin{
-margin-left: 160px;
-}
-
-.current{
-    margin-left: 250px;
-}
-
 .btn-outline-dark:hover {
     background:black;
     color:white;
 }
-.social-navlinks {
-    float: right;
-    padding-right:20px;
-    padding-top: 20px;
-    line-height:70px !important;
-}
-#menu-icon {
-    display: none;
-    position: absolute;
-    left: 90%;
-    top:25px;
+
+.btn-outline-dark:active {
+    background:black;
+    color:white;
+    transform: scale(0.98);     
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:teal;
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ background-color:#4c9e9e;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+}
+ 
 
-
-@media only screen and (max-width : 960px) {
-#menu-icon {
-	display:block;
-}
-#main-nav {
-    width: 100%;
-}
-#main-nav ul { 
-    display: none;
-    position: absolute;
-    text-align: center;
-    background: #fff;
-    border: 5px solid #444;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-radius: 4px 0 4px 4px;
-}
-#main-nav li{
-    width: 100%;
-    padding: 10px 0;
-    margin: 0;
-}
-#main-nav:hover ul {
-    display: inline-block;
-}
-#main-nav .social-navlinks {
-    margin: 0;
-    padding: 0;
-    display:none;
-}
-#main-nav ul li:hover {
-    background:lightgray;
-}
-}
