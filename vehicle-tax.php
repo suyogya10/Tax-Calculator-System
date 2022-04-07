@@ -89,7 +89,7 @@
 
         <div>
             <span>Enter your Vehicle CC: </span>
-            <input name = "cc" type = "number" placeholder = "aa" >
+            <input name = "cc" type = "number" placeholder = "150" >
         </div>
 
         <div>    
@@ -100,7 +100,7 @@
             if(!empty($price)):
                 echo $price;
                 endif;
-            ?>">
+             ?>" required>
         </div> 
     </div>
 </form>
