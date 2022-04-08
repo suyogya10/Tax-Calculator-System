@@ -2,26 +2,47 @@
 
 require './config.php';
 
-    if(isset($_POST['reset'])){
+session_start();
 
-        $otp = $_POST['otp'];
+if(isset($_POST['otp'])){
 
-        $sql = "SELECT COUNT(DISTINCT email) as count From user_login WHERE otp = '$otp'";
-        $result = mysqli_query($con, $sql);
-        $count = mysqli_fetch_object($result);
-        if ($count->count == 1) {
-            header("Location: ./recoverpass.php");
+    $_SESSION['code'] = $_POST['otp'];
+}
 
-        } else {
-            echo "Invalid OTP";
-        }
+echo $_SESSION['code'];
+
+if(isset($_POST['change'])){
+
+//    echo $_SESSION['otp'];
+//    $otp = $_SESSION['otp'];
+
+    $otp =  $_SESSION['code'];
+
+    if($_POST['pass'] == $_POST['cpass']){
+
+        echo $_POST['pass'];
+
+        $encrypted = md5($_POST['pass']);
+        echo  $encrypted;
+
+        $sql = "UPDATE `user_login` SET `pass`='$encrypted' WHERE otp = '$otp'";
+        mysqli_query($con, $sql) or die($con -> error);
+
+//        $sql1 = "UPDATE `user_login` SET `otp`='0' WHERE pass = '$encrypted'";
+//        mysqli_query($con, $sql1);
+
+//        header("Location: ./login.php");
+
+
 
     }
 
 
 
-?>
+}
 
+
+?>
 
 <!Doctype html>
 <html lang="en">
@@ -34,19 +55,23 @@ require './config.php';
 </head>
 <body>
 <div class="container">
-    <form class="login-form" method="post" action="recoverpass.php">
+    <form class="login-form" method="post">
         <div class="login-title">
-            <b>TAXMANDU</b> <br> OTP
+            <b>TAXMANDU</b> <br> NEW PASSWORD
         </div>
         <div class="info">
-            Enter yout OTP !!
+            Enter New Password!!
         </div>
         <div class="">
-            <input class="login-input" class="form-control" id="inputEmail" name="otp" type="number" placeholder="OTP" />
+            <input class="login-input" class="form-control" id="inputEmail" name="pass" type="password" placeholder="Password" />
+            <!-- <label for="inputEmail">Email address</label>-->
+        </div>
+        <div class="">
+            <input class="login-input" class="form-control" id="inputEmail" name="cpass" type="password" placeholder="Confirm Password" />
             <!-- <label for="inputEmail">Email address</label>-->
         </div>
 
-       <input type="submit" value="Reset" name="reset">
+       <input type="submit" name="change" value="Change Password">
 
         <div class="login-forgot">
             <a class="" href="login.php">Return to login</a>

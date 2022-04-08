@@ -13,7 +13,7 @@
         $checkrow = mysqli_num_rows($query);
         if($checkrow == 1){
             $_SESSION['isloggedin'] == $pass;
-            header('Location: ./index.php');
+            header('Location: ../admin/index.php');
         }
 
         else{
@@ -38,25 +38,27 @@
 <body>
 	<div class="container">
 		<div class="login-icon">
-			<i class="glyphicon glyphicon-tint"></i> 
+			<i class="glyphicon glyphicon-tint"></i> TAXMANDU
 		</div>
 		<div class="login-form">
 		  <div class="login-title">
-			TAXMANDU - LOG IN
+			Log In
 		  </div>
+            <form method="post">
 		  <div class="login-input-parts">
 			<input class="login-input" placeholder="Email Address" name="email"/>
-			<input class="login-input" placeholder="Password" name="pass"/>
+			<input class="login-input" type="password" placeholder="Password" name="pass"/>
 			<input class="login-input button" type="submit" value="Log In" name="login"/>
 		  </div>
+            </form>
 		  <div class="login-forgot">
-			Forgot password?
+			<a href="forgot.php">Forgot password? </a>
 		  </div>
 		</div>
 		<div class="login-signup">
 		  Don't have an account? <a href="Signup.php">Sign Up</a>
 		</div>
-	</div>
+	  </div>
 	  <style>
 		  html, body{
   padding:0px;
@@ -85,7 +87,6 @@
   background: #FFFFFF;
   color:#565656;
   padding:40px;
-  margin-top: 100px;
 }
 
 .login-form .login-title{
