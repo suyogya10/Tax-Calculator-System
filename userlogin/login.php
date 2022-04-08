@@ -38,11 +38,11 @@
 <body>
 	<div class="container">
 		<div class="login-icon">
-			<i class="glyphicon glyphicon-tint"></i> TAXMANDU
+			<i class="glyphicon glyphicon-tint"></i> 
 		</div>
 		<div class="login-form">
 		  <div class="login-title">
-			Log In
+			TAXMANDU - LOG IN
 		  </div>
 		  <div class="login-input-parts">
 			<input class="login-input" placeholder="Email Address" name="email"/>
@@ -56,7 +56,7 @@
 		<div class="login-signup">
 		  Don't have an account? <a href="Signup.php">Sign Up</a>
 		</div>
-	  </div>
+	</div>
 	  <style>
 		  html, body{
   padding:0px;
@@ -85,6 +85,7 @@
   background: #FFFFFF;
   color:#565656;
   padding:40px;
+  margin-top: 100px;
 }
 
 .login-form .login-title{
