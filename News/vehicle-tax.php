@@ -193,8 +193,8 @@
 									<a href="#" title="Tax-Calculator" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Tax-Calculator</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
-										<li><a href="#" title="Income-Tax">Income-Tax</a></li>
-										<li><a href="#" title="Vehicle-Tax">Vehicle-Tax</a></li>
+										<li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
+										<li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
 									</ul>
 								</li>
 								
