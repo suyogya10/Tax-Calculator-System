@@ -7,3 +7,5 @@ Use the folowing commands!
 2) To Download and update local files in your own computer:
 	Open Git Bash in the Tax-Calculator-System folder and use'
 	git pull origin main 
+
+NOTE: when there is a problem pushing, alwyas keep a backup of your work and clone the repo again then push.
