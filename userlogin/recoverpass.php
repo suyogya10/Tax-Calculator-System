@@ -50,7 +50,7 @@ if(isset($_POST['change'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORGET PASSWORD - OTP </title>
+    <title>RECOVER PASSWORD  </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -71,7 +71,7 @@ if(isset($_POST['change'])){
             <!-- <label for="inputEmail">Email address</label>-->
         </div>
 
-       <input type="submit" name="change" value="Change Password">
+       <input class="login-input button" type="submit" name="change" value="Change Password">
 
         <div class="login-forgot">
             <a class="" href="login.php">Return to login</a>

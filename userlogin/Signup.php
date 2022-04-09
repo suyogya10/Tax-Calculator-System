@@ -62,11 +62,11 @@
     ?>
 	<div class="container">
 		<div class="login-icon">
-			<i class="glyphicon glyphicon-tint"></i> TAXMANDU 
+			<i class="glyphicon glyphicon-tint"></i> 
 		</div>
 		<div class="login-form">
 		  <div class="login-title">
-			Sign Up
+			TAXMANDU - Sign Up
 		  </div>
 		  <div class="login-input-parts">
               
@@ -117,12 +117,12 @@
   font-size:30px;
 
   font-weight:bold;
-  margin:0px 0px 45px 0px;
+  margin:0px 0px 30px 0px;
 }
 
 .login-form .login-input{
   display:block;
-  margin: 20px auto;
+  margin: 14px auto;
   width:100%;
   padding:15px;
   font-size:18px;

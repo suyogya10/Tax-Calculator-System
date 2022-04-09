@@ -46,7 +46,7 @@ require './config.php';
             <!-- <label for="inputEmail">Email address</label>-->
         </div>
 
-       <input type="submit" value="Reset" name="reset">
+       <input class="login-input button" type="submit" value="Reset" name="reset">
 
         <div class="login-forgot">
             <a class="" href="login.php">Return to login</a>
