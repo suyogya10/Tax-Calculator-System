@@ -5,11 +5,10 @@
     header('Location: ./index.php');
 
     }
-    echo $_SESSION['isloggedin'];
     if(isset($_POST['login'])){
         $uemail = $_POST['email'];
         $pass = md5($_POST['pass']);
-        $query = mysqli_query($con, "SELECT * FROM user_login WHERE email='$uemail' AND pass='$pass'");
+        $query = mysqli_query($con, "SELECT * FROM admin_login WHERE email='$uemail' AND pass='$pass'");
         
             $checkrow = mysqli_num_rows($query);
             if($checkrow == 1){
@@ -69,7 +68,7 @@
                                                 <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="password.html">Forgot Password?</a>
+                                                <a class="small" href="password.php">Forgot Password?</a>
                                                 <button class="btn btn-primary" type="submit" name="login">Login</button>
                                             </div>
                                         </form>

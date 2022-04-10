@@ -14,13 +14,13 @@
         $pass = md5($_POST['pass']);
         $cpass = md5($_POST['cpass']);
         if($pass == $cpass){
-            $checkuser = mysqli_query($con, "SELECT * FROM user_login WHERE email='$email'");
+            $checkuser = mysqli_query($con, "SELECT * FROM admin_login WHERE email='$email'");
             $countuser = mysqli_num_rows($checkuser);
             if($countuser == 1){
                 $error = "<p>User with this email already exists.</p>";
             }
             else{
-                $query =  "INSERT INTO user_login (fname, lname, email, pass) VALUES('$fname', '$lname', '$email', '$pass')";
+                $query =  "INSERT INTO admin_login (fname, lname, email, pass) VALUES('$fname', '$lname', '$email', '$pass')";
                 if(mysqli_query($con, $query)){
                     $success = "User Registered Successfully. Click <a href='./login.php'> here to login.</a>";
                 }

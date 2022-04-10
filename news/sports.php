@@ -1,3 +1,9 @@
+<?php
+session_start();
+error_reporting(0);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en" class="">
 <head>
@@ -6,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<title>BUSINESS - TAXMANDU</title>
+	<title>SPORT - TAXMANDU</title>
 	<!-- Standard Favicon -->
 	<link rel="icon" type="image/x-icon" href="images//favicon.ico" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images//apple-touch-icon-114x114-precomposed.png">
@@ -51,13 +57,30 @@
 								
 							</div>
 							<div class="col-md-4 col-sm-6 logo-block">
-								<a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+								<a href="index.php"><img src="images/logo.png" alt="logo" /></a>
 							</div>
 
-							<div class="col-md-4 col-sm-6 col-xs-6 login-n-switch">
-								<button id="margin" class="btn-outline-dark">Login</button>
-								<button  class="btn-outline-dark">Signup</button>
-							</div>
+                            <div class="col-md-4 col-sm-6 col-xs-6 login-n-switch">
+
+                                <?php
+                                if(!isset($_SESSION['islogged'])){
+                                    ?>
+                                    <a href="http://localhost/tcs/userlogin/login.php"><button id="margin" class="btn-outline-dark">Login</button></a>
+                                    <a href="http://localhost/tcs/userlogin/signup.php"><button  class="btn-outline-dark">Signup</button></a>
+
+                                    <?php
+                                }
+
+                                else{
+                                    ?>
+
+                                    <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
+
+                                    <?php
+                                }
+                                ?>
+
+                            </div>
 							
 							<style>
 								
@@ -72,7 +95,7 @@
     background:white;
     text-transform: uppercase;
     height: 42px;
-    width: 84px;
+    width: 90px;
 	color: #666666; 
     
 }
@@ -115,23 +138,23 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a href="index.html" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
+							<a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
 						</div>
 						<div class="navbar-collapse collapse" id="navbar">
 							<ul class="nav navbar-nav menu-open">
-								<li class=" dropdown">
-									<a href="index.html" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+								<li class="dropdown">
+									<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 								</li>
-								<li class="active dropdown">
+								<li class=" active dropdown">
 									<a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
-										<li><a href="World.html" title="World">World</a></li>
-										<li><a href="Nepal.html" title="Nepal">Nepal</a></li>
-										<li><a href="Finance.html" title="Finance">Finance</a></li>
-										<li><a href="Sports.html" title="Sports">Sports</a></li>
-                                        <li><a href="Business.html" title="Business">Business</a></li>
+										<li><a href="world.php" title="World">World</a></li>
+										<li><a href="nepal.php" title="Nepal">Nepal</a></li>
+										<li><a href="Finance.php" title="Finance">Finance</a></li>
+										<li ><a href="sports.php" title="Sports">Sports</a></li>
+										<li><a href="Business.php" title="Business">Business</a></li>
 										
 									</ul>
 								</li>
@@ -145,7 +168,7 @@
 									</ul>
 								</li>
 								
-								<li><a href="about.html" title="About-us">About Us</a></li>
+								<li><a href="about.php" title="About-us">About Us</a></li>
 								
 							</ul>
 						</div><!--/.nav-collapse -->
@@ -165,10 +188,10 @@
 		<div class="container-fluid no-padding page-banner">
 			<!-- Container -->
 			<div class="container">
-				<h3>BUSINESS NEWS</h3>
+				<h3>SPORTS NEWS</h3>
 				<ol class="breadcrumb">
-					<li><a href="index.html">Home</a></li>
-					<li class="active">BUSINESS</li>
+					<li><a href="index.php">Home</a></li>
+					<li class="active">SPORTS</li>
 				</ol>
 			</div><!-- Container /- -->
 		</div><!-- Page Banner /- -->
@@ -376,7 +399,6 @@
 						<div class="col-md-4 col-sm-6 col-xs-6 widget-block">
 							<!-- Recent Tweets -->
 							<div class="ftr-widget ftr_widget_instagram">
-								
 								
 							</div><!-- Recent Tweets /- -->
 						</div><!-- Widget Block /- -->

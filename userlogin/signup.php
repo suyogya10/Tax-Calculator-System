@@ -45,7 +45,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<form method="post" action="Signup.php">
+<form method="post" action="signup.php">
     <?php
     if(!empty($error)):
 

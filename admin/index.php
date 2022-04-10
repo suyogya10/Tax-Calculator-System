@@ -55,8 +55,8 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Vehicle Tax </a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Income Tax</a>
+                                    <a class="nav-link" href="layout-static.php">Vehicle Tax </a>
+                                    <a class="nav-link" href="layout-sidenav-light.php">Income Tax</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -83,11 +83,11 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">World </a>
-                                            <a class="nav-link" href="404.html">Nepal</a>
-                                            <a class="nav-link" href="500.html">Finance</a>
-                                            <a class="nav-link" href="500.html">Sports</a>
-                                            <a class="nav-link" href="500.html">Business</a>
+                                            <a class="nav-link" href="401.php">World </a>
+                                            <a class="nav-link" href="404.php">Nepal</a>
+                                            <a class="nav-link" href="500.php">Finance</a>
+                                            <a class="nav-link" href="500.php">Sports</a>
+                                            <a class="nav-link" href="500.php">Business</a>
                                         </nav>
                                     </div>
                                 </nav>

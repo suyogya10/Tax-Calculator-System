@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    error_reporting(0);
     if(isset($_POST['calculate'])){
     $salary = $_POST['ysal']; //Takes value from Yearly Salary
     $bonus = $_POST['ybonus']; //Takes value from Yearly Bonus
@@ -128,13 +130,30 @@
 								
 							</div>
 							<div class="col-md-4 col-sm-6 logo-block">
-								<a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+								<a href="index.php"><img src="images/logo.png" alt="logo" /></a>
 							</div>
 
-							<div class="col-md-4 col-sm-6 col-xs-6 login-n-switch">
-								<button id="margin" class="btn-outline-dark">Login</button>
-								<button  class="btn-outline-dark">Signup</button>
-							</div>
+                            <div class="col-md-4 col-sm-6 col-xs-6 login-n-switch">
+
+                                <?php
+                                if(!isset($_SESSION['islogged'])){
+                                    ?>
+                                    <a href="http://localhost/tcs/userlogin/login.php"><button id="margin" class="btn-outline-dark">Login</button></a>
+                                    <a href="http://localhost/tcs/userlogin/signup.php"><button  class="btn-outline-dark">Signup</button></a>
+
+                                    <?php
+                                }
+
+                                else{
+                                    ?>
+
+                                    <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
+
+                                    <?php
+                                }
+                                ?>
+
+                            </div>
 							
 							<style>
 								
@@ -149,7 +168,7 @@
     background:white;
     text-transform: uppercase;
     height: 42px;
-    width: 84px;
+    width: 90px;
 	color: #666666; 
     
 }
@@ -192,23 +211,23 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a href="index.html" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
+							<a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
 						</div>
 						<div class="navbar-collapse collapse" id="navbar">
 							<ul class="nav navbar-nav menu-open">
 								<li class="dropdown">
-									<a href="index.html" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+									<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 								</li>
 								<li class="dropdown">
 									<a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
-										<li><a href="World.html" title="World">World</a></li>
-										<li><a href="Nepal.html" title="Nepal">Nepal</a></li>
-										<li><a href="Finance.html" title="Finance">Finance</a></li>
-										<li><a href="Sports.html" title="Sports">Sports</a></li>
-										<li><a href="Business.html" title="Business">Business</a></li>
+										<li><a href="world.php" title="World">World</a></li>
+										<li><a href="nepal.php" title="Nepal">Nepal</a></li>
+										<li><a href="Finance.php" title="Finance">Finance</a></li>
+										<li><a href="sports.php" title="Sports">Sports</a></li>
+										<li><a href="Business.php" title="Business">Business</a></li>
 										
 									</ul>
 								</li>
@@ -222,7 +241,7 @@
 									</ul>
 								</li>
 								
-								<li><a href="about.html" title="About-us">About Us</a></li>
+								<li><a href="about.php" title="About-us">About Us</a></li>
 								
 							</ul>
 						</div><!--/.nav-collapse -->
@@ -244,7 +263,7 @@
 			<div class="container">
 				<h3>INCOME TAX CALCULATOR</h3>
 				<ol class="breadcrumb">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li class="active">INCOME TAX CALCULATOR</li>
 				</ol>
 			</div><!-- Container /- -->

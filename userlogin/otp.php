@@ -54,7 +54,7 @@ require './config.php';
         </div>
     </form>
     <div class="card-footer text-center py-3">
-        <div class="login-signup" class="small"><a href="Signup.php">Need an account? Sign up!</a></div>
+        <div class="login-signup" class="small"><a href="signup.php">Need an account? Sign up!</a></div>
     </div>
 
 </div>
