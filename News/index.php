@@ -75,6 +75,7 @@
                                             ?>
 
                                             <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
+                                            <a href="http://localhost/tcs/news/user.php"><button type="button" class="btn-outline-dark">History</button></a>
 
                                     <?php
                                         }
@@ -192,7 +193,7 @@
 					<div id="home-slider1" class="rev_slider" data-version="5.0">
 						<ul>
 							<li>
-								<img src="images/slide1.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="image/slide1.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<div class="tp-caption tp-shape tp-shapewrapper" id="slide-layer-0"
 									data-x="['center','center','center','center']" 
 									data-y="['middle','middle','middle','middle']" 
@@ -228,7 +229,7 @@
 									data-splitout="none" 
 									data-responsive_offset="on"
 									data-elementdelay="0.05" 
-									style="z-index: 5; white-space: nowrap; letter-spacing: 1.38px; color:#fff; font-weight: 600;  font-family: 'Poppins', sans-serif;">The World is a Book and <br> those Who do <br> Not Travel Read Only one Page
+									style="z-index: 5; white-space: nowrap; letter-spacing: 1.38px; color:#fff; font-weight: 600;  font-family: 'Poppins', sans-serif;">orem ipsum dolor sit amet consectetur <br> those Who do <br> orem ipsum dolor sit amet consectetur
 								</div>
 								<div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" id="slide-layer-2" 
 									data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']" 
@@ -248,13 +249,13 @@
 									data-splitout="none" 
 									data-responsive_offset="on"
 									data-elementdelay="0.05" 
-									style="z-index: 5; white-space: nowrap; letter-spacing: 0.6px; color:#c7c6c6; font-weight: 600; font-family: 'Poppins', sans-serif;">By : DANIAL SMITH	26 MAY, 2016
+									style="z-index: 5; white-space: nowrap; letter-spacing: 0.6px; color:#c7c6c6; font-weight: 600; font-family: 'Poppins', sans-serif;">
 								</div>
 								
 							</li>
 							
 							<li>
-								<img src="images/slide2.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="image/slide2.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<div class="tp-caption tp-shape tp-shapewrapper" id="slide-layer-4"
 									data-x="['center','center','center','center']" 
 									data-y="['middle','middle','middle','middle']" 
@@ -290,7 +291,8 @@
 									data-splitout="none" 
 									data-responsive_offset="on"
 									data-elementdelay="0.05" 
-									style="z-index: 5; white-space: nowrap; letter-spacing: 1.38px; color:#fff; font-weight: 600;  font-family: 'Poppins', sans-serif;">The World is a Book and <br> those Who do <br> Not Travel Read Only one Page
+									style="z-index: 5; white-space: nowrap; letter-spacing: 1.38px; color:#fff; font-weight: 600;  font-family: 'Poppins', sans-serif;">lore orem ipsum dolor sit amet consectetur
+									 <br> those Who do <br> orem ipsum dolor sit amet consectetur
 								</div>
 								<div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" id="slide-layer-6" 
 									data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']" 
@@ -310,7 +312,7 @@
 									data-splitout="none" 
 									data-responsive_offset="on"
 									data-elementdelay="0.05" 
-									style="z-index: 5; white-space: nowrap; letter-spacing: 0.6px; color:#c7c6c6; font-weight: 600; font-family: 'Poppins', sans-serif;">By : DANIAL SMITH	26 MAY, 2016
+									style="z-index: 5; white-space: nowrap; letter-spacing: 0.6px; color:#c7c6c6; font-weight: 600; font-family: 'Poppins', sans-serif;">
 								</div>
 								
 							</li>
@@ -327,16 +329,16 @@
 						<div class="col-md-7 col-sm-6 col-xs-6 rcnt-review-left">
 							<div class="type-post">
 								<div class="entry-cover">
-									<a href="#"><img src="images/rcnt-review.jpg" alt="Recent" /></a>
+									<a href="#"><img src="image/rcnt-review.jpg" alt="Recent" /></a>
 									<div class="rcnt-category"><a href="#">SPORTS</a></div>
 								</div>
-								<h3 class="entry-title"><a href="#">How one remarkable kick changed a life</a></h3>
+								<h3 class="entry-title"><a href="#">Lorem ipsum dolor sit amet.</a></h3>
 								<div class="post-meta">
 									<div class="post-time"><a href="#">1 hour ago</a></div>
 									
 								</div>
 								<div class="entry-content">
-									<p>So lets make the most of this beautiful day. Since we're together. Till the one day when the lady met this fellow and they knew it was much more than a hunch. They call him Flipper Flipper faster than lightning</p>
+									<p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, quod. Voluptas nihil vitae at quam aperiam corporis hic iusto, pariatur, modi harum, eaque in officiis asperiores error vel nisi odio.</p>
 								</div>
 							</div>
 						</div><!-- Recent Reviews Left /- -->
@@ -344,10 +346,10 @@
 						<div class="col-md-5 col-sm-6 col-xs-6 rcnt-review-right">
 							<div class="rcnt-review-thumb">
 								<div class="entry-cover">
-									<a href="#"><img src="images/rcnt-review1.jpg" alt="Reviews" /></a>
+									<a href="#"><img src="image/rcnt-review1.jpg" alt="Reviews" /></a>
 									<div class="rcnt-category"><a href="#">Travel</a></div>
 								</div>
-								<h3 class="entry-title"><a href="#">ABC Local See realtime coverage Great white</a></h3>
+								<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 								<div class="post-meta">
 									<div class="post-time"><a href="#">1 hour ago</a></div>
 								
@@ -355,10 +357,10 @@
 							</div>
 							<div class="rcnt-review-thumb">
 								<div class="entry-cover">
-									<a href="#"><img src="images/rcnt-review2.jpg" alt="Reviews" /></a>
+									<a href="#"><img src="image/rcnt-review1.jpg" alt="Reviews" /></a>
 									<div class="rcnt-category"><a href="#">WORLD</a></div>
 								</div>
-								<h3 class="entry-title"><a href="#">Teen films racist bus stop attack</a></h3>
+								<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 								<div class="post-meta">
 									<div class="post-time"><a href="#">2 hour ago</a></div>
 								
@@ -366,10 +368,10 @@
 							</div>
 							<div class="rcnt-review-thumb">
 								<div class="entry-cover">
-									<a href="#"><img src="images/rcnt-review3.jpg" alt="Reviews" /></a>
+									<a href="#"><img src="image/rcnt-review1.jpg" alt="Reviews" /></a>
 									<div class="rcnt-category"><a href="#">SPORTS</a></div>
 								</div>
-								<h3 class="entry-title"><a href="#">How one remarkable kick changed a life</a></h3>
+								<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 								<div class="post-meta">
 									<div class="post-time"><a href="#">1 hour ago</a></div>
 								
@@ -389,35 +391,35 @@
 							<div class="row">
 								<div class="col-md-3 col-sm-12 col-xs-3 thumb-block no-padding">
 									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
-										<div class="entry-cover"><a href="#"><img src="images/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
-										<div class="post-date"><a href="#">Apirl 21,2016</a></div>
-										<h3 class="entry-title"><a href="#">New deal as Pathways goes under</a></h3>
+										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
+										<div class="post-date"><a href="#">Date </a></div>
+										<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									</div>
 									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
-										<div class="entry-cover"><a href="#"><img src="images/lifestyle-thumb2.jpg" alt="Life Style" /></a></div>
-										<div class="post-date"><a href="#">Apirl 21,2016</a></div>
-										<h3 class="entry-title"><a href="#">Alzheimer's research offers hope</a></h3>
+										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
+										<div class="post-date"><a href="#">Date</a></div>
+										<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									</div>
 								</div>
 								<div class="col-md-6 col-sm-12 col-xs-6 big-block">
 									<div class="life-block-big">
-										<div class="entry-cover"><a href="#"><img src="images/lifestyle-big.jpg" alt="Life Style" /></a></div>
+										<div class="entry-cover"><a href="#"><img src="image/lifestyle-big.jpg" alt="Life Style" /></a></div>
 										<div class="entry-content">
-											<div class="post-date"><a href="#">Apirl 11,2016</a></div>
-											<h3 class="entry-title"><a href="#">The Scientific Push To Declassify Transgender A Mental Disorder</a></h3>
+											<div class="post-date"><a href="#">Date</a></div>
+											<h3 class="entry-title"><a href="#">loremlorem ipsum dolor sit amet consectetur</a></h3>
 										</div>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-12 col-xs-3 thumb-block no-padding">
 									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
-										<div class="entry-cover"><a href="#"><img src="images/lifestyle-thumb3.jpg" alt="Life Style" /></a></div>
-										<div class="post-date"><a href="#">Apirl 21,2016</a></div>
-										<h3 class="entry-title"><a href="#">Activity tracker not quite fit</a></h3>
+										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
+										<div class="post-date"><a href="#">Date</a></div>
+										<h3 class="entry-title"><a href="#">lorem lorem ipsum dolor sit amet consectetur</a></h3>
 									</div>
 									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
-										<div class="entry-cover"><a href="#"><img src="images/lifestyle-thumb4.jpg" alt="Life Style" /></a></div>
-										<div class="post-date"><a href="#">Apirl 21,2016</a></div>
-										<h3 class="entry-title"><a href="#">The best advice you'll ever get</a></h3>
+										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
+										<div class="post-date"><a href="#">date</a></div>
+										<h3 class="entry-title"><a href="#">lorem lorem ipsum dolor sit amet consectetur</a></h3>
 									</div>
 								</div>
 							</div>
@@ -434,24 +436,24 @@
 						<aside id="widget_latestposts" class="widget widget_latestposts">
 							<h3 class="widget-title">Recent News</h3>
 							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="images/wd-rcnt-post1.jpg" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="The paradox of modern Vietnam" href="#">The paradox of modern Vietnam</a></h5>
-								<span><a href="#">TRAVEL</a> <a href="#">MAY 1, 2016</a></span>
+								<a href="#" title="Recent Posts"><i><img src="image/wd-rcnt-post1.jpg" class="wp-post-image" alt="blog-1"></i></a>
+								<h5><a title="The paradox of modern Vietnam" href="#">lorem ipsum dolor sit amet consectetur</a></h5>
+								<span><a href="#">TRAVEL</a> <a href="#">date</a></span>
 							</div>
 							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="images/wd-rcnt-post2.jpg" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="BHP Billiton's Samarco costs top $3 billion" href="#">BHP Billiton's Samarco costs top $3 billion</a></h5>
-								<span><a href="#">BUSINESS</a> <a href="#">MAY 1, 2016</a></span>
+								<a href="#" title="Recent Posts"><i><img src="image/wd-rcnt-post1.jpg" class="wp-post-image" alt="blog-1"></i></a>
+								<h5><a title="BHP Billiton's Samarco costs top $3 billion" href="#">lorem ipsum dolor sit amet consectetur</a></h5>
+								<span><a href="#">BUSINESS</a> <a href="#">Date</a></span>
 							</div>
 							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="images/wd-rcnt-post3.jpg" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="I'm a goose too, says Dimma over Dusty" href="#">I'm a goose too, says Dimma over Dusty</a></h5>
-								<span><a href="#">SPORTS</a> <a href="#">MAY 1, 2016</a></span>
+								<a href="#" title="Recent Posts"><i><img src="image/wd-rcnt-post1.jpg" class="wp-post-image" alt="blog-1"></i></a>
+								<h5><a title="I'm a goose too, says Dimma over Dusty" href="#">lorem ipsum dolor sit amet consectetur</a></h5>
+								<span><a href="#">SPORTS</a> <a href="#">date</a></span>
 							</div>
 							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="images/wd-rcnt-post4.jpg" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="The Tradtional Console Life Cycle is Dying" href="#">The Tradtional Console Life Cycle is Dying</a></h5>
-								<span><a href="#">TECHNOLOGY</a> <a href="#">MAY 1, 2016</a></span>
+								<a href="#" title="Recent Posts"><i><img src="image/wd-rcnt-post1.jpg" class="wp-post-image" alt="blog-1"></i></a>
+								<h5><a title="The Tradtional Console Life Cycle is Dying" href="#">lorem ipsum dolor sit amet consectetur</a></h5>
+								<span><a href="#">TECHNOLOGY</a> <a href="#">date</a></span>
 							</div>
 						</aside>
 					</div>
@@ -466,9 +468,9 @@
 					<div class="row">				
 						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
 							<div class="type-post">
-								<div class="entry-cover"><a href="#"><img src="images/sport-post1.jpg" alt="Sports" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">midfielder Mason hoping loan days done</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 								</div>
 							</div>
 						</div><!-- Post Box /- -->
@@ -476,38 +478,18 @@
 						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
 							<div class="type-post">
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Westfield FFA Cup wrap Round of 32 MD1</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									
 								</div>
-								<div class="entry-cover"><a href="#"><img src="images/sport-post2.jpg" alt="Sports" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
 							</div>
 						</div><!-- Post Box /- -->
 						<!-- Post Box -->
 						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
 							<div class="type-post">
-								<div class="entry-cover"><a href="#"><img src="images/sport-post3.jpg" alt="Sports" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">inesh D'Souza: The secret history of the city</a></h3>
-									
-								</div>
-							</div>
-						</div><!-- Post Box /- -->
-						<!-- Post Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
-							<div class="type-post">
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Sydney Roosters Brisbane Broncos</a></h3>
-									
-								</div>
-								<div class="entry-cover"><a href="#"><img src="images/sport-post4.jpg" alt="Sports" /></a></div>
-							</div>
-						</div><!-- Post Box /- -->
-						<!-- Post Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
-							<div class="type-post">
-								<div class="entry-cover"><a href="#"><img src="images/sport-post5.jpg" alt="Sports" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Blacktown City striker Danny Choi scores 70m FFA Cup </a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consecteturcity</a></h3>
 									
 								</div>
 							</div>
@@ -516,10 +498,30 @@
 						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
 							<div class="type-post">
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">The Racist History of Portland, the Whitest City</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									
 								</div>
-								<div class="entry-cover"><a href="#"><img src="images/sport-post6.jpg" alt="Sports" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
+							</div>
+						</div><!-- Post Box /- -->
+						<!-- Post Box -->
+						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
+							<div class="type-post">
+								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
+								<div class="entry-header">
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
+									
+								</div>
+							</div>
+						</div><!-- Post Box /- -->
+						<!-- Post Box -->
+						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
+							<div class="type-post">
+								<div class="entry-header">
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
+									
+								</div>
+								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
 							</div>
 						</div><!-- Post Box /- -->
 					</div><!-- Row /- -->
@@ -540,17 +542,17 @@
 								<h3>INTERNATIONAL</h3>
 							</div><!-- Section Header /- -->
 							<div class="category-full-box">
-								<div class="entry-cover"><a href="#"><img src="images/category-health.jpg" alt="Categories" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/category-health.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Human nasal might be superbug killer</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									<div class="post-meta">
-										<span><a href="#">May 12, 2016</a></span>
+										<span><a href="#">Date </a></span>
 										</span>
 									</div>
 								</div>
 							</div>
 							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="images/category-health-thumb1.jpg" alt="Categories" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
 									<h3 class="entry-title"><a href="#">Human nasal might be superbug killer</a></h3>
 									<div class="post-meta">
@@ -559,11 +561,11 @@
 								</div>
 							</div>
 							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="images/category-health-thumb2.jpg" alt="Categories" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">The Ice actually did real good</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									<div class="post-meta">
-										<span><a href="#">May 17, 2016</a></span>
+										<span><a href="#">Date</a></span>
 									</div>
 								</div>
 							</div>
@@ -578,30 +580,30 @@
 								<h3>INTERNATIONAL</h3>
 							</div><!-- Section Header /- -->
 							<div class="category-full-box">
-								<div class="entry-cover"><a href="#"><img src="images/category-food.jpg" alt="Categories" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/category-health.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">The Lifestyle Habit Nearly as Bad for health</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									<div class="post-meta">
-										<span><a href="#">May 18, 2016</a></span>
+										<span><a href="#">date</a></span>
 										</span>
 									</div>
 								</div>
 							</div>
 							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="images/category-food-thumb1.jpg" alt="Categories" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">West Nile Virus Detected in Mosquitoe</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									<div class="post-meta">
-										<span><a href="#">May 26, 2016</a></span>
+										<span><a href="#">date</a></span>
 									</div>
 								</div>
 							</div>
 							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="images/category-food-thumb2.jpg" alt="Categories" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">The Lifestyle Habit Nearly as Bad</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									<div class="post-meta">
-										<span><a href="#">May 18, 2016</a></span>
+										<span><a href="#">date</a></span>
 									</div>
 								</div>
 							</div>
@@ -615,31 +617,31 @@
 								<h3>INTERNATIONAL</h3>
 							</div><!-- Section Header /- -->
 							<div class="category-full-box">
-								<div class="entry-cover"><a href="#"><img src="images/category-travel.jpg" alt="Categories" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/category-health.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Donald Trump is a unique threat to American democracy</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									<div class="post-meta">
-										<span><a href="#">May 28, 2016</a></span>
-										<span>By <a href="#">Simon </a></span>
-										<span><a href="#"><i class="fa fa-commenting-o"></i>&nbsp; 42 Comments</a></span>
+										<span><a href="#">date</a></span>
+										
+										
 									</div>
 								</div>
 							</div>
 							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="images/category-travel-thumb1.jpg" alt="Categories" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">West Nile Virus Detected in Mosquitoe</a></h3>
+									<h3 class="entry-title"><a href="#">loram lorem ipsum dolor sit amet consectetur</a></h3>
 									<div class="post-meta">
-										<span><a href="#">May 26, 2016</a></span>
+										<span><a href="#">date</a></span>
 									</div>
 								</div>
 							</div>
 							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="images/category-travel-thumb2.jpg" alt="Categories" /></a></div>
+								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">The Racist History of Portland</a></h3>
+									<h3 class="entry-title"><a href="#">lorem ipsum dolor sit amet consectetur</a></h3>
 									<div class="post-meta">
-										<span><a href="#">May 18, 2016</a></span>
+										<span><a href="#">date</a></span>
 									</div>
 								</div>
 							</div>
