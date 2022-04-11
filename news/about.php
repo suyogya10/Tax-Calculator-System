@@ -88,7 +88,7 @@ error_reporting(0);
                                     ?>
 
                                     <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
-
+                                    <a href="http://localhost/tcs/news/user.php"><button type="button" class="btn-outline-dark">History</button></a>
                                     <?php
                                 }
                                 ?>
@@ -164,9 +164,9 @@ error_reporting(0);
 									<ul class="dropdown-menu">				
 										<li><a href="world.php" title="World">World</a></li>
 										<li><a href="nepal.php" title="Nepal">Nepal</a></li>
-										<li><a href="Finance.php" title="Finance">Finance</a></li>
+										<li><a href="finance.php" title="Finance">Finance</a></li>
 										<li><a href="sports.php" title="Sports">Sports</a></li>
-										 <li><a href="Business.php" title="Business">Business</a></li>
+										 <li><a href="business.php" title="Business">Business</a></li>
 										
 									</ul>
 								</li>
@@ -198,6 +198,7 @@ error_reporting(0);
 		
 		<!-- Page Banner -->
 		<div class="container-fluid no-padding page-banner">
+            <img src="image/aboutus.jpg" alt="Team" />
 			<!-- Container -->
 			<div class="container">
 				<h3>ABOUT US</h3>
@@ -223,21 +224,21 @@ error_reporting(0);
 					<div  class="row">
 						<div class="col-md-3 col-sm-4 col-xs-6">
 							<div class="team-box">
-								<img src="images/team1.jpg" alt="Team" />
+								<img src="image/sakshyam.jpg" alt="Team" />
 								<h4>SAKSHAM BHATTRAI <span>PROJECT MANAGER</span></h4>
 								
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-6">
 							<div class="team-box">
-								<img src="images/team2.jpg" alt="Team" />
+								<img src="image/adarsh.jpg" alt="Team" />
 								<h4>ADARSH GHIMIRE <span>BUSINESS ANALYST</span></h4>
 								
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-6">
 							<div class="team-box">
-								<img src="images/team3.jpg" alt="Team" />
+								<img src="image/ashim.jpg" alt="Team" />
 								<h4>ASHIM BARAL <span>DEVELOPER - BACKEND</span></h4>
 								
 							</div>
@@ -245,21 +246,21 @@ error_reporting(0);
 						<br>
 						<div class="col-md-3 col-sm-4 col-xs-6">
 							<div class="team-box">
-								<img src="images/team4.jpg" alt="Team" />
+								<img src="image/suyogya.jpg" alt="Team" />
 								<h4>SUYOGYA GAUTAM <span>DEVELOPER - BACKEND</span></h4>
 								
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-6">
 							<div id="boox" class="team-box">
-								<img src="images/team4.jpg" alt="Team" />
+								<img src="image/pukar.jpg" alt="Team" />
 								<h4>PUKAR BHANDARI <span>DEVELOPER - FRONTEND</span></h4>
 								
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-6">
 							<div id="boox" class="team-box">
-								<img src="images/team4.jpg" alt="Team" />
+								<img src="image/subid.jpg" alt="Team" />
 								<h4>SUBID DAHAL <span>DEVELOPER - FRONTEND</span></h4>
 								
 							</div>

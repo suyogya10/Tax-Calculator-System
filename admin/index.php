@@ -43,7 +43,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">TAXMANDU</div>
-                            <a class="nav-link" href="index.php">
+                            <a class="nav-link" href="index.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
@@ -55,8 +55,8 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="../News/vehicle-tax.php">Vehicle Tax </a>
-                                    <a class="nav-link" href="../News/calculator.php">Income Tax</a>
+                                    <a class="nav-link" href="layout-static.php">Vehicle Tax </a>
+                                    <a class="nav-link" href="layout-sidenav-light.php">Income Tax</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -72,8 +72,8 @@
                                     </a>-->
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="../News/vehicle-tax.php">Vehicle Tax</a>
-                                            <a class="nav-link" href="../News/calculator.php">Income Tax</a>
+                                            <a class="nav-link" href="login.html">Vehicle Tax</a>
+                                            <a class="nav-link" href="register.html">Income Tax</a>
                                             
                                         </nav>
                                     </div>
@@ -83,11 +83,11 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">World </a>
-                                            <a class="nav-link" href="404.html">Nepal</a>
-                                            <a class="nav-link" href="500.html">Finance</a>
-                                            <a class="nav-link" href="500.html">Sports</a>
-                                            <a class="nav-link" href="500.html">Business</a>
+                                            <a class="nav-link" href="401.php">World </a>
+                                            <a class="nav-link" href="404.php">Nepal</a>
+                                            <a class="nav-link" href="500.php">Finance</a>
+                                            <a class="nav-link" href="500.php">Sports</a>
+                                            <a class="nav-link" href="500.php">Business</a>
                                         </nav>
                                     </div>
                                 </nav>
@@ -146,7 +146,7 @@
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">View User</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="viewuser.php"></a>
+                                        <a class="small text-white stretched-link" href="#"></a>
                                         <div class="small text-white"><i class="fas fa-eye"></i></div>
                                     </div>
                                 </div>

@@ -2,6 +2,6 @@
 
 session_start();
 session_unset();
-header("Location: login.php");
+header("Location: ../news/index.php");
 
 ?>

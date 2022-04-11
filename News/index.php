@@ -153,9 +153,9 @@
 
 										<li><a href="world.php" title="World">World</a></li>
 										<li><a href="nepal.php" title="Nepal">Nepal</a></li>
-										<li><a href="Finance.php" title="Finance">Finance</a></li>
+										<li><a href="finance.php" title="Finance">Finance</a></li>
 										<li><a href="sports.php" title="Sports">Sports</a></li>
-										<li><a href="Business.php" title="Business">Business</a></li>
+										<li><a href="business.php" title="Business">Business</a></li>
 										
 									</ul>
 								</li>
@@ -668,7 +668,7 @@
 							<!-- About Widget -->
 							<div class="ftr-widget ftr_widget_about">
 								<h3>ABOUT US</h3>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae fugit minus sapiente, assumenda officia sint consectetur quaerat deserunt corrupti porro et quod molestias, enim dicta?</p>
+								<p> This is a project by Group 3 of L5CG4 </p>
 								
 							</div><!-- About Widget /- -->
 						</div><!-- Widget Block /- -->
@@ -685,13 +685,13 @@
 							<div class="ftr-widget ftr_widget_link">
 								<h3>QUICK LINKS</h3>
 								<ul>
-									<li><a href="#" title="World">World</a></li>
-									<li><a href="#" title="Nepal">Nepal</a></li>
+									<li><a href="world.php" title="World">World</a></li>
+									<li><a href="nepal.php" title="Nepal">Nepal</a></li>
 									
 								</ul>
 								<ul>
-									<li><a href="#" title="Finance">Finance</a></li>
-									<li><a href="#" title="Sports">Sports</a></li>
+									<li><a href="finance.php" title="Finance">Finance</a></li>
+									<li><a href="sports.php" title="Sports">Sports</a></li>
 									
 								</ul>
 							</div><!-- Link Widget /- -->

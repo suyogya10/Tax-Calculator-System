@@ -1,6 +1,10 @@
 <?php
+
+    require '../userlogin/config.php';
     session_start();
-    error_reporting(0);
+
+        $price = 0;
+
         if(isset($_POST['Calculate'])){
             $vehicle = $_POST['vehicle'];
             $pradesh = $_POST['Pradesh'];
@@ -46,6 +50,12 @@
                     $price = "Rs 30000";
                 }
             }
+
+            $email = $_SESSION['islogged'];
+            $date = date("Y/m/d");
+            $sql = "INSERT INTO `tax_history`(`email`, `vehicle`, `income`,`date`) VALUES ('$email','$price','0', '$date')";
+            mysqli_query($con, $sql);
+
 
         }
 
@@ -124,7 +134,7 @@
                                     ?>
 
                                     <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
-
+                                    <a href="http://localhost/tcs/news/user.php"><button type="button" class="btn-outline-dark">History</button></a>
                                     <?php
                                 }
                                 ?>
@@ -201,9 +211,9 @@
 									<ul class="dropdown-menu">				
 										<li><a href="world.php" title="World">World</a></li>
 										<li><a href="nepal.php" title="Nepal">Nepal</a></li>
-										<li><a href="Finance.php" title="Finance">Finance</a></li>
+										<li><a href="finance.php" title="Finance">Finance</a></li>
 										<li><a href="sports.php" title="Sports">Sports</a></li>
-										<li><a href="Business.php" title="Business">Business</a></li>
+										<li><a href="business.php" title="Business">Business</a></li>
 										
 									</ul>
 								</li>
@@ -235,6 +245,7 @@
 		
 		<!-- Page Banner -->
 		<div class="container-fluid no-padding page-banner">
+            <img src="image/vehicletax.jpg" alt="Team" />
 			<!-- Container -->
 			<div class="container">
 				<h3>VEHICLE TAX CALCULATOR</h3>
