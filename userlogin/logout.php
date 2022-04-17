@@ -2,6 +2,6 @@
 
 session_start();
 session_unset();
-header("Location: ../news/index.php");
+header("Location: ../news/calculator.php");
 
 ?>

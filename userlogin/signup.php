@@ -1,7 +1,5 @@
 <?php
     require "./config.php";
-
-
     session_start();
     if(isset($_SESSION['isloggedin'])){
         header('Location: ./index.php');
@@ -23,12 +21,10 @@
                 if(mysqli_query($con, $query)){
                     $success = "User Registered Successfully. Click <a href='./login.php'> here to login.</a>";
                 }
-
             }
         }
         else{
             $error = "<p>Please Enter the same password.</p>";
-
         }
     }
 ?>

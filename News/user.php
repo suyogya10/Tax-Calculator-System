@@ -2,10 +2,7 @@
     require "../userlogin/config.php";
     session_start();
     $email = $_SESSION['islogged'];
-
     $sql = "SELECT * FROM `tax_history` WHERE email = '$email'";
-
-
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +14,7 @@
 </style>
 <body>
     <div>
-        <a href="index.php"><button class="home" name="Home"> Home </button></a>
+        <a href="calculator.php"><button class="home" name="Home"> Home </button></a>
     </div>
 
     <div class="heading">
@@ -33,7 +30,6 @@
     </tr>
 
     <?php
-
     $result = mysqli_query($con, $sql);
     while($row = mysqli_fetch_assoc($result)){
         ?>
@@ -43,10 +39,8 @@
             <td><?php echo $row['vehicle']; ?></td>
             <td><?php echo $row['date']; ?></td>
         </tr>
-
         <?php
     }
-
     ?>
 
 </table>

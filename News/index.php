@@ -156,21 +156,21 @@
 										<li><a href="finance.php" title="Finance">Finance</a></li>
 										<li><a href="sports.php" title="Sports">Sports</a></li>
 										<li><a href="business.php" title="Business">Business</a></li>
-										
+
 									</ul>
 								</li>
 
 								<li class="dropdown">
 									<a href="#" title="Tax-Calculator" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Tax-Calculator</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">				
+									<ul class="dropdown-menu">
 										<li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
 										<li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
 									</ul>
 								</li>
-								
+
 								<li><a href="about.php" title="About-us">About Us</a></li>
-								
+
 							</ul>
 						</div><!--/.nav-collapse -->
 						<div id="loginpanel" class="desktop-hide">

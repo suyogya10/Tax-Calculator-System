@@ -1,4 +1,5 @@
 <?php
+    error_reporting(0);
     session_start();
     require '../userlogin/config.php';
     if(isset($_POST['calculate'])){
@@ -38,6 +39,13 @@
                         $newTotal = $total - 700000;
                         $outcome = 0.30 * $newTotal + $firstOut + $secondOut + $thirdOut;
                     }
+                    if($total > 2000000){ //more than 20 lakh
+                        $firstOut = 0.01 * 450000;
+                        $secondOut = 0.10 * 100000;
+                        $thirdOut = 0.20 * 200000;
+                        $newTotal = $total - 700000;
+                        $outcome = 0.36 * $newTotal + $firstOut + $secondOut + $thirdOut;
+                    }
                 }
                 if ($status== 'unmarried'){
 
@@ -61,6 +69,13 @@
                         $thirdOut = 0.20 * 200000;
                         $newTotal = $total - 700000;
                         $outcome = 0.30 * $newTotal + $firstOut + $secondOut + $thirdOut;
+                    }
+                    if($total > 2000000){
+                        $firstOut = 0.01 * 400000;
+                        $secondOut = 0.10 * 100000;
+                        $thirdOut = 0.20 * 200000;
+                        $newTotal = $total - 700000;
+                        $outcome = 0.36 * $newTotal + $firstOut + $secondOut + $thirdOut;
                     }
                 }
             }
@@ -137,7 +152,7 @@
 								
 							</div>
 							<div class="col-md-4 col-sm-6 logo-block">
-								<a href="index.php"><img src="images/logo.png" alt="logo" /></a>
+								<a href="#"><img src="images/logo.png" alt="logo" /></a>
 							</div>
 
                             <div class="col-md-4 col-sm-6 col-xs-6 login-n-switch">
@@ -218,16 +233,16 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
+							<!--- <a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a> --->
 						</div>
 						<div class="navbar-collapse collapse" id="navbar">
 							<ul class="nav navbar-nav menu-open">
 								<li class="dropdown">
-									<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+									<!--- <a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>  --->
 									<i class="ddl-switch fa fa-angle-down"></i>
 								</li>
 								<li class="dropdown">
-									<a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
+									<!--- <a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a> --->
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
 										<li><a href="world.php" title="World">World</a></li>
@@ -271,14 +286,14 @@
 			<div class="container">
 				<h3>INCOME TAX CALCULATOR</h3>
 				<ol class="breadcrumb">
-					<li><a href="index.php">Home</a></li>
+					<!--- <li><a href="index.php">Home</a></li> --->
 					<li class="active">INCOME TAX CALCULATOR</li>
 				</ol>
 			</div><!-- Container /- -->
 		</div><!-- Page Banner /- -->
 
 <main class="maan">
-	<h1>Calculate Vehicle Tax</h1>
+	<h1>Calculate Income Tax</h1>
     <div class="form">
         <form method="post" action="calculator.php">
             <label class="stus">Status:</label><br>
@@ -407,7 +422,7 @@
 							<!-- About Widget -->
 							<div class="ftr-widget ftr_widget_about">
 								<h3>ABOUT US</h3>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae fugit minus sapiente, assumenda officia sint consectetur quaerat deserunt corrupti porro et quod molestias, enim dicta?</p>
+								<p>A small project by L5CG4 Students</p>
 								
 							</div><!-- About Widget /- -->
 						</div><!-- Widget Block /- -->
@@ -424,13 +439,13 @@
 							<div class="ftr-widget ftr_widget_link">
 								<h3>QUICK LINKS</h3>
 								<ul>
-									<li><a href="#" title="Technology">World</a></li>
-									<li><a href="#" title="Nepal">Nepal</a></li>
+									<li><a href="about.php" title="Technology">About us</a></li>
+									<li><a href="vehicle-tax.php" title="Nepal">Vehicle Tax</a></li>
 									
 								</ul>
 								<ul>
-									<li><a href="#" title="Lifestyle">Finance</a></li>
-									<li><a href="#" title="Sports">Sports</a></li>
+									<li><a href="calculator.php" title="Lifestyle">income Tax</a></li>
+									<li><a href="#" title="Sports"></a></li>
 									
 								</ul>
 							</div><!-- Link Widget /- -->

@@ -1,5 +1,5 @@
 <?php
-
+    error_reporting(0);
     require '../userlogin/config.php';
     session_start();
 
@@ -116,7 +116,7 @@
 								
 							</div>
 							<div class="col-md-4 col-sm-6 logo-block">
-								<a href="index.php"><img src="images/logo.png" alt="logo" /></a>
+								<a href="#"><img src="images/logo.png" alt="logo" /></a>
 							</div>
 
                             <div class="col-md-4 col-sm-6 col-xs-6 login-n-switch">
@@ -197,16 +197,16 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
+							<a href="#" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
 						</div>
 						<div class="navbar-collapse collapse" id="navbar">
 							<ul class="nav navbar-nav menu-open">
 								<li class="dropdown">
-									<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+									<!--- <a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a> --->
 									<i class="ddl-switch fa fa-angle-down"></i>
 								</li>
 								<li class="dropdown">
-									<a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
+									<!--- <a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a> --->
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
 										<li><a href="world.php" title="World">World</a></li>
@@ -391,7 +391,7 @@
 							<!-- About Widget -->
 							<div class="ftr-widget ftr_widget_about">
 								<h3>ABOUT US</h3>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae fugit minus sapiente, assumenda officia sint consectetur quaerat deserunt corrupti porro et quod molestias, enim dicta?</p>
+								<p>A small project by L5CG4 Students</p>
 								
 							</div><!-- About Widget /- -->
 						</div><!-- Widget Block /- -->
@@ -408,13 +408,13 @@
 							<div class="ftr-widget ftr_widget_link">
 								<h3>QUICK LINKS</h3>
 								<ul>
-									<li><a href="#" title="Technology">World</a></li>
-									<li><a href="#" title="Nepal">Nepal</a></li>
+									<li><a href="about.php" title="Technology">About us</a></li>
+									<li><a href="vehicle-tax.php" title="Nepal">Vehicle Tax</a></li>
 									
 								</ul>
 								<ul>
-									<li><a href="#" title="Lifestyle">Finance</a></li>
-									<li><a href="#" title="Sports">Sports</a></li>
+									<li><a href="calculator.php" title="Lifestyle">Income Tax</a></li>
+									<li><a href="#" title="Sports"></a></li>
 									
 								</ul>
 							</div><!-- Link Widget /- -->

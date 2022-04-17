@@ -78,7 +78,7 @@
         </div>
 
 
-            <input value="resetpass" type="submit" name="reset">
+            <input  class="login-input button" value="resetpass" type="submit" name="reset">
 
 
         <div class="login-forgot">

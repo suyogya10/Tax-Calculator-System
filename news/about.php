@@ -71,7 +71,7 @@ error_reporting(0);
 							<div class="col-md-4 col-sm-6 col-xs-6 social-block">
 							</div>
 							<div class="col-md-4 col-sm-6 logo-block">
-								<a href="index.php"><img src="images/logo.png" alt="logo" /></a>
+								<a href="#"><img src="images/logo.png" alt="logo" /></a>
 							</div>
                             <div class="col-md-4 col-sm-6 col-xs-6 login-n-switch">
 
@@ -150,23 +150,23 @@ error_reporting(0);
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
+							<a href="#" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a>
 						</div>
 						<div class="navbar-collapse collapse" id="navbar">
 							<ul class="nav navbar-nav menu-open">
 								<li class=" dropdown">
-									<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+									<!---<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a> --->
 									<i class="ddl-switch fa fa-angle-down"></i>
 								</li>
 								<li class="dropdown">
-									<a href="" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
+									<!--- <a href="" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a> --->
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
-										<li><a href="world.php" title="World">World</a></li>
-										<li><a href="nepal.php" title="Nepal">Nepal</a></li>
-										<li><a href="finance.php" title="Finance">Finance</a></li>
-										<li><a href="sports.php" title="Sports">Sports</a></li>
-										 <li><a href="business.php" title="Business">Business</a></li>
+										<li><a href="world.php" title="World"></a></li>
+										<li><a href="nepal.php" title="Nepal"></a></li>
+										<li><a href="finance.php" title="Finance"></a></li>
+										<li><a href="sports.php" title="Sports"></a></li>
+										 <li><a href="business.php" title="Business"></a></li>
 										
 									</ul>
 								</li>
@@ -231,7 +231,7 @@ error_reporting(0);
 						</div>
 						<div class="col-md-3 col-sm-4 col-xs-6">
 							<div class="team-box">
-								<img src="image/adarsh.jpg" alt="Team" />
+								<img src="image/adarshg.jpg" alt="Team" />
 								<h4>ADARSH GHIMIRE <span>BUSINESS ANALYST</span></h4>
 								
 							</div>
@@ -289,7 +289,7 @@ error_reporting(0);
 							<!-- About Widget -->
 							<div class="ftr-widget ftr_widget_about">
 								<h3>ABOUT US</h3>
-								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus labore aspernatur nesciunt doloremque ipsum, eligendi deserunt, natus dignissimos hic tempora omnis facere asperiores quo debitis porro sapiente optio! Doloribus..</p>
+								<p>A small project by L5CG4 Students</p>
 								
 							</div><!-- About Widget /- -->
 						</div><!-- Widget Block /- -->
@@ -306,13 +306,13 @@ error_reporting(0);
 							<div class="ftr-widget ftr_widget_link">
 								<h3>QUICK LINKS</h3>
 								<ul>
-									<li><a href="#" title="Technology">World</a></li>
-									<li><a href="#" title="Food">Nepal</a></li>
+									<li><a href="about.php" title="Technology">About us</a></li>
+									<li><a href="vehicle-tax.php" title="Food"></a>Vehicle Tax</li>
 									
 								</ul>
 								<ul>
-									<li><a href="#" title="Lifestyle">Finance</a></li>
-									<li><a href="#" title="Sports">Sports</a></li>
+									<li><a href="calculator.php" title="Lifestyle">Income tax</a></li>
+									<li><a href="#" title="Sports"></a></li>
 							
 								</ul>
 							</div><!-- Link Widget /- -->

@@ -4,7 +4,7 @@
     require "./config.php";
 
     if(isset($_SESSION['islogged'])) {
-        header('Location: ../news/index.php');
+        header('Location: ../news/calculator.php');
     }
 
     else {
@@ -16,12 +16,11 @@
             if ($checkrow == 1) {
                   $_SESSION['islogged'] = $uemail;
                   echo $_SESSION['islogged'];
-                   header('Location: ../news/index.php');
+                   header('Location: ../news/calculator.php');
             } else {
                 $error = "Incorrect username or password.";
             }
         }
-
         ?>
 
         <!DOCTYPE html>
