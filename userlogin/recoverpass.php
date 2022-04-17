@@ -8,37 +8,18 @@ if(isset($_POST['otp'])){
 
     $_SESSION['code'] = $_POST['otp'];
 }
-
 if(isset($_POST['change'])){
-
-//    echo $_SESSION['otp'];
-//    $otp = $_SESSION['otp'];
 
     $otp =  $_SESSION['code'];
 
     if($_POST['pass'] == $_POST['cpass']){
 
-        echo $_POST['pass'];
-
         $encrypted = md5($_POST['pass']);
-        echo  $encrypted;
 
         $sql = "UPDATE `user_login` SET `pass`='$encrypted' WHERE otp = '$otp'";
         mysqli_query($con, $sql) or die($con -> error);
-
-//        $sql1 = "UPDATE `user_login` SET `otp`='0' WHERE pass = '$encrypted'";
-//        mysqli_query($con, $sql1);
-
-//        header("Location: ./login.php");
-
-
-
     }
-
-
-
 }
-
 
 ?>
 

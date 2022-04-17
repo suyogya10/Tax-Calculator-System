@@ -37,7 +37,6 @@
             $mail->addAddress($email);     //Add a recipient
             $mail->addAddress($email);               //Name is optional
 
-
             //Content
 
             $mail->isHTML(true);                                  //Set email format to HTML
@@ -52,7 +51,6 @@
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
-
 
 ?>
 
