@@ -9,8 +9,6 @@ if(isset($_POST['otp'])){
     $_SESSION['code'] = $_POST['otp'];
 }
 
-echo $_SESSION['code'];
-
 if(isset($_POST['change'])){
 
 //    echo $_SESSION['otp'];

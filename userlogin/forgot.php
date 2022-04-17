@@ -34,14 +34,16 @@
 
             //Recipients
             $mail->setFrom('otp@amsystem.codes', 'TAXMANDU');
-            $mail->addAddress('reachashim@gmail.com');     //Add a recipient
-            $mail->addAddress('reachashim@gmail.com');               //Name is optional
+            $mail->addAddress($email);     //Add a recipient
+            $mail->addAddress($email);               //Name is optional
 
 
             //Content
+
             $mail->isHTML(true);                                  //Set email format to HTML
+            //$mail->AddAttachment('../news/images/logo.png');
             $mail->Subject = 'Here is the subject';
-            $mail->Body    = 'Your One-Time Password is <b>'.$otp.'</b>';
+            $mail->Body    = 'Your One-Time Password is <b>'.$otp.'</b>. Please reset your password with the OTP recieved. <b> OR </b> <br> Goto the link provided below: <br> http://localhost/tcs/userlogin/otp.php . ';
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
@@ -78,7 +80,7 @@
         </div>
 
 
-            <input  class="login-input button" value="resetpass" type="submit" name="reset">
+            <input  class="login-input button" value="Reset Password" type="submit" name="reset">
 
 
         <div class="login-forgot">

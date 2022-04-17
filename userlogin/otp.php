@@ -39,7 +39,7 @@ require './config.php';
             <b>TAXMANDU</b> <br> OTP
         </div>
         <div class="info">
-            Enter yout OTP !!
+            Enter your OTP here !!
         </div>
         <div class="">
             <input class="login-input" class="form-control" id="inputEmail" name="otp" type="number" placeholder="OTP" />
