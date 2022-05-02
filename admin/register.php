@@ -1,11 +1,8 @@
 <?php
     require "./config.php";
-  
-
     session_start();
     if(isset($_SESSION['isloggedin'])){
         header('Location: ./index.php');
-
     }
     if(isset($_POST['register'])){
         $fname = $_POST['fname'];
@@ -24,21 +21,12 @@
                 if(mysqli_query($con, $query)){
                     $success = "User Registered Successfully. Click <a href='./login.php'> here to login.</a>";
                 }
-
-                
-
-                   
-                
             }
-           
-            
         }
         else{
             $error = "<p>Please Enter the same password.</p>";
-            
         }
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -128,7 +116,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                            <div class="text-muted">Copyright &copy; Taxmandu 2022</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;

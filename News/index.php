@@ -166,6 +166,7 @@
 									<ul class="dropdown-menu">
 										<li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
 										<li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
+                                        <li><a href="non-resi.php" title="nonresi">Non-Resident</a></li>
 									</ul>
 								</li>
 

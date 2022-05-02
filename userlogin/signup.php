@@ -2,7 +2,7 @@
     require "./config.php";
     session_start();
     if(isset($_SESSION['isloggedin'])){
-        header('Location: ../news/calculator.php');
+        header('Location: ./index.php');
     }
     if(isset($_POST['signup'])){
         $fname = $_POST['fname'];

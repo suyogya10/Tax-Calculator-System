@@ -1,3 +1,20 @@
+<?php
+error_reporting(0);
+session_start();
+require '../userlogin/config.php';
+if(isset($_POST['calculate'])){
+    $ntrans = $_POST['ntrans']; //Takes value from Normal Transaction
+    $ship = $_POST['ship']; //Takes value from Shipping
+    $ship2 = $_POST['ship2']; //Takes value from Shipping air and telecom
+    $rep = $_POST['rep']; //Takes value from Rep
+    $aone = 0.25 * $ntrans;
+    $atwo = 0.05 * $ship;
+    $athree = 0.02 * $ship2;
+    $afour = 0.05 * $rep;
+    $outcome = $aone + $atwo + $athree + $afour;
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
@@ -127,11 +144,11 @@
 									<a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
-										<li><a href="World.html" title="World">World</a></li>
-										<li><a href="Nepal.html" title="Nepal">Nepal</a></li>
-										<li><a href="Finance.html" title="Finance">Finance</a></li>
-										<li><a href="Sports.html" title="Sports">Sports</a></li>
-										<li><a href="Business.html" title="Business">Business</a></li>
+										<li><a href="World.php" title="World">World</a></li>
+										<li><a href="Nepal.php" title="Nepal">Nepal</a></li>
+										<li><a href="Finance.php" title="Finance">Finance</a></li>
+										<li><a href="Sports.php" title="Sports">Sports</a></li>
+										<li><a href="Business.php" title="Business">Business</a></li>
 										
 									</ul>
 								</li>
@@ -142,10 +159,11 @@
 									<ul class="dropdown-menu">				
 										<li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
 										<li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
+                                        <li><a href="non-resi.php" title="nonresi">Non-Resident</a></li>
 									</ul>
 								</li>
 								
-								<li><a href="about.html" title="About-us">About Us</a></li>
+								<li><a href="about.php" title="About-us">About Us</a></li>
 								
 							</ul>
 						</div><!--/.nav-collapse -->
@@ -177,17 +195,16 @@
 <main class="maan">
 	<h1>Calculate Income Tax of Non-resident</h1>
     <div class="form">
-        <form method="post" action="calculator.php">
+        <form method="post" action="non-resi.php">
             
             <label class="stu">Normal Transaction:</label><br>
-            <input type="text" id="ysal" name="ysal"><br>
+            <input type="text" id="ntrans" name="ntrans"><br>
             <label class="stu">Through shipping, air or telecom service, postage,<br> satellite, and optional fiber project:</label><br>
-            <input type="text" id="ybonus" name="ybonus" value="0"><br>
-            <label class="stu">Shipping, airr or telecom service through territory of Nepal:</label><br>
-            <input type="text" id="epf" name="epf" value="0"><br>
-            
-            <label class="stu">Repatrition of profit by Foreign Permanent Establishment:</label><br>
-            <input type="text" id="insu" name="insu" value="0"><br><br>
+            <input type="text" id="ship" name="ship" value="0"><br>
+            <label class="stu">Shipping, air or telecom service through territory of Nepal:</label><br>
+            <input type="text" id="ship2" name="ship2" value="0"><br>
+            <label class="stu">Repatriation of profit by Foreign Permanent Establishment:</label><br>
+            <input type="text" id="rep" name="rep" value="0"><br><br>
 			<div>
 				<input class="rest" type="submit" value="Reset" name="Reset" value="1">
 				<input class="calcu" type="submit" value="Calculate" name="calculate" value="0">	
@@ -195,7 +212,12 @@
         </form><br>
 		<div class="txar">
 			<textarea name="ans">
-				
+								<?php
+                                if (!empty($outcome)):
+                                    echo $outcome;
+                                endif;
+
+                                ?>
 			</textarea>
 		</div>
     </div>

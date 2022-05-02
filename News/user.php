@@ -18,7 +18,7 @@
     </div>
 
     <div class="heading">
-        <h2 >History Table </h2>
+        <h2 >Tax History Table </h2>
     </div>
 
 <table style="width:100%">

@@ -3,6 +3,9 @@
     session_start();
     require '../userlogin/config.php';
     if(isset($_POST['calculate'])){
+        $rate1 = "SELECT `rate` FROM `income_rate` WHERE id = 1;";
+        mysqli_query($con, $rate1);
+        echo ($rate1);
     $salary = $_POST['ysal']; //Takes value from Yearly Salary
     $bonus = $_POST['ybonus']; //Takes value from Yearly Bonus
     $epf = $_POST['epf']; //Takes value from Employee Providend Fund
@@ -11,6 +14,9 @@
     $insu = $_POST['insu']; //Takes value from Insurance
     $total = $salary + $bonus; //Sum of Ysal and Ybonus
     $status = $_POST['status']; //Check status married, unmarried or nonresident
+        if ($status == "nonresident"){
+
+        }
     if ($pfcit < 300000){ //check if EPF adn CIT are lesser than required
         if ($pfcit < (0.33*$total)){ //check if EPF adn CIT are lesser than salary total
             $total = $total - $pfcit;
@@ -95,8 +101,6 @@
     $date = date("Y/m/d");
     $sql = "INSERT INTO `tax_history`(`email`, `vehicle`, `income`,`date`) VALUES ('$email','0','$outcome', '$date')";
     mysqli_query($con, $sql);
-
-
 }
 ?>
 <!DOCTYPE html>
@@ -233,16 +237,16 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<!--- <a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a> --->
+							<a href="index.php" class="navbar-brand"><img src="images/logo.png" alt="logo" /></a> --->
 						</div>
 						<div class="navbar-collapse collapse" id="navbar">
 							<ul class="nav navbar-nav menu-open">
 								<li class="dropdown">
-									<!--- <a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>  --->
+									<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 								</li>
 								<li class="dropdown">
-									<!--- <a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a> --->
+									<a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
 										<li><a href="world.php" title="World">World</a></li>
@@ -260,6 +264,7 @@
 									<ul class="dropdown-menu">				
 										<li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
 										<li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
+                                        <li><a href="non-resi.php" title="nonresi">Non-Resident</a></li>
 									</ul>
 								</li>
 								
@@ -300,7 +305,7 @@
             <select name="status" id="status">
                 <option value="married" name="married">Married</option>
                 <option value="unmarried" name="unmarried">Un-Married</option>
-                <!--- <option value="nonresident" name="nonresident">Non-Resident</option> --->
+
             </select><br>
             <label class="stu">Yearly Salary:</label><br>
             <input type="text" id="ysal" name="ysal"><br>
