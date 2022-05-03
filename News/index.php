@@ -85,18 +85,16 @@
                                 <style>
 								
 .btn-outline-dark {
-    margin-top: 0px;
-    margin-bottom: -10px;
+    text-align: center;
+    font-weight:bold;
+    background:white;
+    font-family: roboto, 'sans serif';
+    font-size:16px;
+    text-transform: uppercase;
     border-radius: 30px;
     border: 2px solid #666666;
-    font-family: roboto, 'sans serif';
-    font-weight:bold;
-    font-size:16px;
-    background:white;
-    text-transform: uppercase;
-    height: 42px;
     width: 90px;
-	color: #666666; 
+    color: #666666; 
     
 }
 .btn-outline-dark:hover {

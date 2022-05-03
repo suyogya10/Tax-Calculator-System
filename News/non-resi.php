@@ -75,44 +75,46 @@ if(isset($_POST['calculate'])){
 								<button id="margin" class="btn-outline-dark">Login</button>
 								<button  class="btn-outline-dark">Signup</button>
 							</div>
-							
-							<style>
-								
-.btn-outline-dark {
-    margin-top: 0px;
-    margin-bottom: -10px;
-    border-radius: 30px;
-    border: 2px solid #666666;
-    font-family: roboto, 'sans serif';
-    font-weight:bold;
-    font-size:16px;
-    background:white;
-    text-transform: uppercase;
-    height: 42px;
-    width: 84px;
-	color: #666666; 
-    
-}
-.btn-outline-dark:hover {
-    background:#2D9CDB;
-    color:white;
-    cursor:pointer;
-	border: 2px solid #2D9CDB;
-}
 
-.btn-outline-dark:active {
-    background:#2D9CDB;
-    color:white;
-	border: 2px solid #2D9CDB ;
-    transform: scale(0.98);     
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-}
-
-</style>
 							<div class="col-md-4 col-sm-6 col-xs-6 login-n-switch">
 								
 								
 							</div>
+														
+<style>
+	#margin{
+		margin-right: 30px;
+	}
+	.btn-outline-dark {
+		text-align: center;
+		font-weight:bold;
+		background:white;
+		font-family: roboto, 'sans serif';
+		font-size:16px;
+		text-transform: uppercase;
+		border-radius: 30px;
+		border: 2px solid #666666;
+		width: 90px;
+		height: 52px;
+		color: #666666; 
+		
+	}
+	.btn-outline-dark:hover {
+		background:#2D9CDB;
+		color:white;
+		cursor:pointer;
+		border: 2px solid #2D9CDB;
+	}
+
+	.btn-outline-dark:active {
+		background:#2D9CDB;
+		color:white;
+		border: 2px solid #2D9CDB ;
+		transform: scale(0.98);     
+		box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+	}
+
+</style>
 						</div>
 						
 					</div><!-- Container /- -->
@@ -312,7 +314,7 @@ if(isset($_POST['calculate'])){
 							<!-- About Widget -->
 							<div class="ftr-widget ftr_widget_about">
 								<h3>ABOUT US</h3>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae fugit minus sapiente, assumenda officia sint consectetur quaerat deserunt corrupti porro et quod molestias, enim dicta?</p>
+								<p>This is a project by Group 3 of L5CG4</p>
 								
 							</div><!-- About Widget /- -->
 						</div><!-- Widget Block /- -->
