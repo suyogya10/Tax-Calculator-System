@@ -1,10 +1,16 @@
 <?php
     session_start();
-    error_reporting(0);
+    require "../userlogin/config.php";
 
+    $main = mysqli_query($con, "SELECT * FROM news ORDER BY newsID DESC LIMIT 1");
+
+    $sub = mysqli_query($con, "SELECT * FROM news ORDER BY  newsID DESC LIMIT 1, 5");
+
+    $more = mysqli_query($con, "SELECT * FROM news WHERE newsID= 1 OR newsID= 2;");
+
+    $morel = mysqli_query($con, "SELECT * FROM news WHERE newsID= 3 OR newsID= 4;");
 
 ?>
-
 
 <!DOCTYPE html>
 
@@ -323,335 +329,129 @@
 				<div class="container">	
 					<div class="section-header">
 						<h3>RECENT NEWS</h3>
-					</div>		
+					</div>
+
+                    <?php
+
+                       while($r = mysqli_fetch_assoc($main))
+
+
+                    {
+
+
+                    ?>
 					<div class="row">
 						<div class="col-md-7 col-sm-6 col-xs-6 rcnt-review-left">
 							<div class="type-post">
 								<div class="entry-cover">
 									<a href="#"><img src="image/rcnt-review.jpg" alt="Recent" /></a>
-									<div class="rcnt-category"><a href="#">SPORTS</a></div>
+									<div class="rcnt-category"><a href="#"> <?php echo $r['newsCategory'];  ?></a></div>
 								</div>
-								<h3 class="entry-title"><a href="#">Nepal beat PNG by 7 wicket</a></h3>
+								<h3 class="entry-title"><a href="#"><?php echo $r['newsHead'];
+
+                                ?></a></h3>
 								<div class="post-meta">
 									<div class="post-time"><a href="#">1 hour ago</a></div>
 									
 								</div>
 								<div class="entry-content">
-									<p> Nepal beat PNG by 7 wicket chasing the target of 210. Sandeep take 3 wicket  and Rohit score century. </p>
+									<p> <?php
+
+                                        if (strlen($r['newsBody']) < 500) {
+                                            echo $r['newsBody'];
+                                        } else {
+
+                                            $new = wordwrap($r['newsBody'], 500);
+                                            $new = explode("\n", $new);
+
+                                            $new = $new[0] . '...';
+                                            echo $new;
+                                        } ?> </p>
 								</div>
 							</div>
 						</div><!-- Recent Reviews Left /- -->
 						<!-- Recent Reviews Thumb -->
+                        <?php
+
+                        }
+
+                        ?>
 						<div class="col-md-5 col-sm-6 col-xs-6 rcnt-review-right">
+
+                            <?php
+
+                            while ($row = mysqli_fetch_assoc($sub))
+                                {
+                            ?>
 							<div class="rcnt-review-thumb">
 								<div class="entry-cover">
 									<a href="#"><img src="image/rcnt-review1.jpg" alt="Reviews" /></a>
-									<div class="rcnt-category"><a href="#">Travel</a></div>
+									<div class="rcnt-category"><a href="#"> <?php  echo $row['newsCategory']?></a></div>
 								</div>
-								<h3 class="entry-title"><a href="#">Tourism sector upbeat as Nepal throws door open to fully vaxxed travellers</a></h3>
+								<h3 class="entry-title"><a href="#"> <?php
+
+                                        if (strlen($row['newsHead']) < 50) {
+                                            echo $row['newsHead'];
+                                        } else {
+
+                                            $new = wordwrap($row['newsHead'], 50);
+                                            $new = explode("\n", $new);
+
+                                            $new = $new[0] . '...';
+                                            echo $new;
+                                        } ?></a></h3>
 								<div class="post-meta">
 									<div class="post-time"><a href="#">1 hour ago</a></div>
 								
 								</div>
 							</div>
-							<div class="rcnt-review-thumb">
-								<div class="entry-cover">
-									<a href="#"><img src="image/rcnt-review1.jpg" alt="Reviews" /></a>
-									<div class="rcnt-category"><a href="#">WORLD</a></div>
-								</div>
-								<h3 class="entry-title"><a href="#">Zelenskiy braces for ‘hard battle’, Boris Johnson visits with aid </a></h3>
-								<div class="post-meta">
-									<div class="post-time"><a href="#">2 hour ago</a></div>
-								
-								</div>
-							</div>
-							<div class="rcnt-review-thumb">
-								<div class="entry-cover">
-									<a href="#"><img src="image/rcnt-review1.jpg" alt="Reviews" /></a>
-									<div class="rcnt-category"><a href="#">SPORTS</a></div>
-								</div>
-								<h3 class="entry-title"><a href="#">20 teams on 2024 t20 cricket world cup</a></h3>
-								<div class="post-meta">
-									<div class="post-time"><a href="#">1 hour ago</a></div>
-								
-								</div>
-							</div>
+
+                            <?php
+                            }
+                            ?>
+
 						</div>
 					</div>
 				</div>
 			</div>
-			
-			<div class="padding-80"></div>
+
+			<div class="padding-50"></div>
+
+            <!-- More News --->
 			<div class="container">
 				<div class="row">
 					<div class="col-md-9 col-sm-7 content-area content_space">
 						<div class="lifestyle-bolck">
-							<h4 class="block-title">NEPAL NEWS</h4>
+							<h4 class="block-title">OLDER NEWS</h4>
+                            <?php
+
+                            while($mr = mysqli_fetch_assoc($more)){
+                                while($mrl = mysqli_fetch_assoc($morel)){
+
+
+                            ?>
 							<div class="row">
 								<div class="col-md-3 col-sm-12 col-xs-3 thumb-block no-padding">
 									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
 										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
-										<div class="post-date"><a href="#">Date </a></div>
-										<h3 class="entry-title"><a href="#">Date set but why some are doubting timely polls</a></h3>
-									</div>
-									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
-										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
 										<div class="post-date"><a href="#">Date</a></div>
-										<h3 class="entry-title"><a href="#">Nepali Congress set to decide today in favour of poll alliance</a></h3>
+										<h3 class="entry-title"><a href="#"><?php echo $mr['newsHead']; ?>  </a></h3>
 									</div>
 								</div>
-								<div class="col-md-6 col-sm-12 col-xs-6 big-block">
-									<div class="life-block-big">
-										<div class="entry-cover"><a href="#"><img src="image/lifestyle-big.jpg" alt="Life Style" /></a></div>
-										<div class="entry-content">
-											<div class="post-date"><a href="#">Date</a></div>
-											<h3 class="entry-title"><a href="#">‘Out of compulsion’: Ruling coalition’s electoral alliance easier said than done</a></h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-12 col-xs-3 thumb-block no-padding">
-									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
-										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
-										<div class="post-date"><a href="#">Date</a></div>
-										<h3 class="entry-title"><a href="#">Coalition members seek to fortify alliance plan for local elections</a></h3>
-									</div>
-									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
-										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
-										<div class="post-date"><a href="#">date</a></div>
-										<h3 class="entry-title"><a href="#">Ruling alliance finds it tough to divide up six metropolis mayor positions</a></h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						
-					</div><!-- Content Area /- -->
-					
-					<!-- Widget Area -->
-					<div class="col-md-3 col-sm-5 widget-area widget_space">
-					
-						<!-- Widget: Search -->
-						
-						<aside id="widget_latestposts" class="widget widget_latestposts">
-							<h3 class="widget-title">Recent News</h3>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="image/wd-rcnt-post1.jpg" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="The paradox of modern Vietnam" href="#">Pakistan’s Prime Minister Imran Khan ousted in no-confidence vote</a></h5>
-								<span><a href="#">WORLD</a> <a href="#">date</a></span>
-							</div>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="image/wd-rcnt-post1.jpg" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="BHP Billiton's Samarco costs top $3 billion" href="#">Health insurance policyholders bear the brunt of payment arrears by authority</a></h5>
-								<span><a href="#">BUSINESS</a> <a href="#">Date</a></span>
-							</div>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="image/wd-rcnt-post1.jpg" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="I'm a goose too, says Dimma over Dusty" href="#">DC beats kkr by 45 runs</a></h5>
-								<span><a href="#">SPORTS</a> <a href="#">date</a></span>
-							</div>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="image/wd-rcnt-post1.jpg" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="The Tradtional Console Life Cycle is Dying" href="#">New Bhairahawa airport is ready, but airlines are not</a></h5>
-								<span><a href="#">NEPAL</a> <a href="#">date</a></span>
-							</div>
-						</aside>
-					</div>
-				</div>
-			</div>
-			
-			<div class="container-fluid no-padding sports-block">
-				<div class="container">
-					<div class="section-header section-header2">
-						<h3>Sports NEWS</h3>
-					</div>
-					<div class="row">				
-						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
-							<div class="type-post">
-								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">DC beats mumbai by 3 run</a></h3>
-								</div>
-							</div>
-						</div><!-- Post Box /- -->
-						<!-- Post Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
-							<div class="type-post">
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Barca beats real madrid by 5-1 goal</a></h3>
-									
-								</div>
-								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
-							</div>
-						</div><!-- Post Box /- -->
-						<!-- Post Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
-							<div class="type-post">
-								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Nepal wins three nation tri-series </a></h3>
-									
-								</div>
-							</div>
-						</div><!-- Post Box /- -->
-						<!-- Post Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
-							<div class="type-post">
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Nepal football team flight thailand for asia cup qualifier</a></h3>
-									
-								</div>
-								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
-							</div>
-						</div><!-- Post Box /- -->
-						<!-- Post Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
-							<div class="type-post">
-								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Qatar to provide visa for 180+ countries during world cup </a></h3>
-									
-								</div>
-							</div>
-						</div><!-- Post Box /- -->
-						<!-- Post Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 post-box">
-							<div class="type-post">
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">CSK loose four consecutive matches</a></h3>
-									
-								</div>
-								<div class="entry-cover"><a href="#"><img src="image/sport-post1.jpg" alt="Sports" /></a></div>
-							</div>
-						</div><!-- Post Box /- -->
-					</div><!-- Row /- -->
-				</div><!-- Container /- -->
-			</div><!-- Sports Post Block /- -->
-			
-			<!-- Categories Post Block -->
-			<div class="container-fluid no-padding category-post-block">
-				<!-- Container -->
-				<div class="container">
-					<!-- Row -->
-					<div class="row">
-						<!-- Category Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 category-box">
-							<!-- Section Header -->
-							<div class="section-header section-header2 section-header3">
-								
-								<h3>INTERNATIONAL</h3>
-							</div><!-- Section Header /- -->
-							<div class="category-full-box">
-								<div class="entry-cover"><a href="#"><img src="image/category-health.jpg" alt="Categories" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Srilanka on financial crisis</a></h3>
-									<div class="post-meta">
-										<span><a href="#">Date </a></span>
-										</span>
-									</div>
-								</div>
-							</div>
-							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Human nasal might be superbug killer</a></h3>
-									<div class="post-meta">
-										<span><a href="#">May 12, 2016</a></span>
-									</div>
-								</div>
-							</div>
-							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Climate change displacing the most vulnerable</a></h3>
-									<div class="post-meta">
-										<span><a href="#">Date</a></span>
-									</div>
-								</div>
-							</div>
-							
-						</div><!-- Category Box /- -->
-						
-						<!-- Category Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 category-box">
-							<!-- Section Header -->
-							<div class="section-header section-header2 section-header3">
-								
-								<h3>INTERNATIONAL</h3>
-							</div><!-- Section Header /- -->
-							<div class="category-full-box">
-								<div class="entry-cover"><a href="#"><img src="image/category-health.jpg" alt="Categories" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Shanghai Covid cases keep rising, food supply problems persist</a></h3>
-									<div class="post-meta">
-										<span><a href="#">date</a></span>
-										</span>
-									</div>
-								</div>
-							</div>
-							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Leclerc claims thumping win in Australia for Ferrari</a></h3>
-									<div class="post-meta">
-										<span><a href="#">date</a></span>
-									</div>
-								</div>
-							</div>
-							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Tiger Woods' rollercoaster third round</a></h3>
-									<div class="post-meta">
-										<span><a href="#">date</a></span>
-									</div>
-								</div>
-							</div>
-							
-						</div><!-- Category Box /- -->
-						
-						<!-- Category Box -->
-						<div class="col-md-4 col-sm-6 col-xs-6 category-box">
-							<!-- Section Header -->
-							<div class="section-header section-header2 section-header3">
-								<h3>INTERNATIONAL</h3>
-							</div><!-- Section Header /- -->
-							<div class="category-full-box">
-								<div class="entry-cover"><a href="#"><img src="image/category-health.jpg" alt="Categories" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Shanghai to New York in two hours? China joins the hypersonic flight race</a></h3>
-									<div class="post-meta">
-										<span><a href="#">date</a></span>
-										
-										
-									</div>
-								</div>
-							</div>
-							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">'Birtherism' to the 'Big Lie': Inside Obama's fight to counter </a></h3>
-									<div class="post-meta">
-										<span><a href="#">date</a></span>
-									</div>
-								</div>
-							</div>
-							<div class="category-thumb-box">
-								<div class="entry-cover"><a href="#"><img src="image/category-health-thumb1.jpg" alt="Categories" /></a></div>
-								<div class="entry-header">
-									<h3 class="entry-title"><a href="#">Two GOP senators chose to disrespect Ketanji Brown Jackson. </a></h3>
-									<div class="post-meta">
-										<span><a href="#">date</a></span>
-									</div>
-								</div>
-							</div>
-							
-						</div><!-- Category Box /- -->
-					</div><!-- Row /- -->
-				</div><!-- Container /- -->
-			</div><!-- Categories Post Block /- -->
-			
-			
+                                <div class="col-md-5 col-sm-5 col-xs-5 thumb-block no-padding">
+                                    <div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
+                                        <div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
+                                        <div class="post-date"><a href="#">Date</a></div>
+                                        <h3 class="entry-title"><a href="#"><?php echo $mrl['newsHead']; ?></a></h3>
+                                    </div>
+                                </div>
 
+							</div>
+                            <?php
+                            }}
+                            ?>
+						</div>
+					</div>
 		</main>
 
 		<!-- Footer Section -->

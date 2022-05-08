@@ -58,6 +58,7 @@
 
 
         }
+
 ?>
 
 <!DOCTYPE html>
@@ -202,7 +203,7 @@
 									<i class="ddl-switch fa fa-angle-down"></i>
 								</li>
 								<li class="dropdown">
-									 <a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
+									<a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
 										<li><a href="world.php" title="World">World</a></li>
@@ -220,6 +221,7 @@
 									<ul class="dropdown-menu">				
 										<li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
 										<li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
+                                        <li><a href="non-resi.php" title="Non-Resident">Non-Resident</a></li>
 									</ul>
 								</li>
 								
@@ -256,16 +258,16 @@
     <h1>Calculate Vehicle Tax</h1>
     <form class="form" method="post" action="vehicle-tax.php">
     <div> 
-        <div>
-        <label class="stus">Select Vehicle Type:</label> <br>   
-        <select name= "vehicle" placeholder="vehicle">
+        
+        <label class="stus">Select Vehicle Type:</label>    
+        
+        
+            <label class="stu">Select your Pradesh:</label> 
+            <br>
+            <select class="spacee" name= "vehicle" placeholder="vehicle">
             <option value= "1"> Bike </option>
-        </select>
-        </div>
-
-        <div>
-            <label class="stu">Select your Pradesh:</label><br>    
-            <select name= "Pradesh" placeholder="Pradesh">
+            </select>
+            <select class="space" name= "Pradesh" placeholder="Pradesh">
                 <option value= "1"> Province 1 </option>
                 <option value= "2"> Madhesh </option>
                 <option value= "3"> Bagmati </option>
@@ -273,20 +275,19 @@
                 <option value= "5"> Lumbini </option>
                 <option value= "6"> Karnali </option>
                 <option value= "7"> Sudur Paschim </option>
+                
             </select>
-        </div>
+            <br>
+            <label class="s">Select Fiscal Year:</label>
+            
+            <label class="stu">Enter your Vehicle CC: </label><br>
 
-        <div>
-            <label class="stu">Select Fiscal Year:</label><br>
-            <select name= "fy" placeholder="fy">
+            <select class="spaceee" name= "fy" placeholder="fy">
                 <option value= "1"> 2078/79 </option>
             </select>
-        </div>
 
-        <div>
-            <label class="stu">Enter your Vehicle CC: </label><br>
-            <input name = "cc" type = "number" placeholder = "eg. 150" >
-        </div>
+            <input class="side"  name = "cc" type = "number" placeholder = "eg. 150" >
+        
 
         <div class="stu"> 
             <button class="rest" name="Reset"> Reset</button>   
@@ -309,20 +310,44 @@
     }
 .stu{
     margin-top: 20px;
+    margin-left: 130px;
 }
 .form{
-    margin-left: 60px;
+    margin-left: -70px;
     font-weight: medium;
     font-size: 18px;
 }
 .stus{
     margin-top: 40px;
 }  
+.s{
+    margin-right: 18px;
+}
 .tala{
     padding: 40px;
-    margin-left: -40px;
+    margin-left: 100px;
+}
+.space{
+    margin-left: 115px;
+    width: 190px;
+    height: 30px;
+}
+.spacee{
+    width: 190px;
+    height: 30px;
+}
+.spaceee{
+    width: 190px;
+    height: 30px;
+}
+.side{
+    margin-left: 115px;
+    width: 190px;
+    height: 30px;
 }
 .calcu{
+        margin-left: 290px;
+        margin-top: 20px;
         background-color: #2D9CDB;
         border: none;
         color: white;
@@ -348,7 +373,7 @@
     }
 
     .rest{
-        
+        margin-left: -130px;
         background-color: white;
         border: none;
         color: #2D9CDB;
