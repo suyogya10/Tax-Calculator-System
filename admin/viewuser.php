@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    require "../userlogin/config.php";
+
+    $main = mysqli_query($con, "SELECT * FROM user_login;");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -55,10 +62,8 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="../News/vehicle-tax.php">Vehicle Tax </a>
-                                    <a class="nav-link" href="../News/calculator.php">Income Tax</a>
-                                    <a class="nav-link" href="../News/non-resi.php">Non-Resident Tax</a>
-
+                                    <a class="nav-link" href="layout-static.php">Vehicle Tax </a>
+                                    <a class="nav-link" href="layout-sidenav-light.php">Income Tax</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -68,17 +73,28 @@
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <!--<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Tax Calculator
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>-->
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.php">Vehicle Tax</a>
+                                            <a class="nav-link" href="register.php">Income Tax</a>
+                                            
+                                        </nav>
+                                    </div>
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                                         Pages
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="../News/world.php">World </a>
-                                            <a class="nav-link" href="../News/nepal.php">Nepal</a>
-                                            <a class="nav-link" href="../News/Finance.php">Finance</a>
-                                            <a class="nav-link" href="../News/sports.php">Sports</a>
-                                            <a class="nav-link" href="../News/Business.php">Business</a>
+                                            <a class="nav-link" href="401.php">World </a>
+                                            <a class="nav-link" href="404.php">Nepal</a>
+                                            <a class="nav-link" href="500.php">Finance</a>
+                                            <a class="nav-link" href="500.php">Sports</a>
+                                            <a class="nav-link" href="500.php">Business</a>
                                         </nav>
                                     </div>
                                 </nav>
@@ -95,42 +111,56 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">TAXMANDU - ADMIN PANNEL</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                        
-                        <div class="row">
+                        <h2 class="mt-4">TAXMANDU - ADMIN PANNEL</h2>
+                        <h4>USERS TAXMANDU NEWS</h4>
+                        <div class="form">           
+                            
+<style>
+	table {
+	  font-family: arial, sans-serif;
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+	
+	td, th {
+	  border: 1px solid #dddddd;
+	  text-align: left;
+	  padding: 8px;
+	}
+	
+	tr:nth-child(even) {
+	  background-color: #dddddd;
+	}
+	</style>
+	</head>
+	<body>
+	
+	
+	
+	<table>
+	  <tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Status</th>
+	  </tr>
+	  <tr>
+          <?php
+          while($r = mysqli_fetch_assoc($main))
+          {
+          ?>
+          <td><?php echo $r['fname'];?> <?php echo $r['lname'];?></td>
+          <td><?php echo $r['email'];?></td>
+          <td><button class="btn-outline-darkkkk" type="submit" id="remove" name="remove">Remove</button> </td>
+	  </tr>
+    <?php } ?>
+	</table>
+	
+	
+	
+	
 
-                            <div class="col-xl-3 col-md-6">
-                                    <div class="card bg-success text-white mb-4">
-                                        <div class="card-body">Add news</div>
-                                        <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <a class="small text-white stretched-link" href="newsadd.php"></a>
-                                            <div class="small text-white"><i class="fas fa-plus"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Delete News</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="deletenews.php"></a>
-                                        <div class="small text-white"><i class="fas fa-minus-circle"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">View User</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="viewuser.php"></a>
-                                        <div class="small text-white"><i class="fas fa-eye"></i></div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
+
                         <div class="row">
                             <div class="col-xl-6">
                                 
@@ -148,6 +178,63 @@
                             </div>
                         </div>
                     </div>
+                    <style>
+						.btn-outline-darkkk{
+							margin-left: 30px;
+							background:green;
+						}
+						.btn-outline-darkkkk{
+							background: red;
+							margin-left: 20px;
+						}
+                        .form{
+							margin-top: 40px;
+                            margin-left: 15px;
+                        }
+                        .two{
+                            width: 400px;
+                        }
+                        .one{
+                            width: 400px;
+                        }
+                        .three{
+                            width: 400px;
+                        }
+                        .News{
+                            height: 200px;
+                            width: 600px;
+						}
+								
+.btn-outline-dark {
+    margin-left: 250px;
+    text-align: center;
+    font-weight:bold;
+    background:white;
+    font-family: roboto, 'sans serif';
+    font-size:16px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 2px solid #666666;
+    width: 90px;
+    color: #666666; 
+    
+}
+.btn-outline-dark:hover {
+    background:#2D9CDB;
+    color:white;
+    cursor:pointer;
+	border: 2px solid #2D9CDB;
+}
+
+.btn-outline-dark:active {
+    background:#2D9CDB;
+    color:white;
+	border: 2px solid #2D9CDB ;
+    transform: scale(0.98);     
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+</style>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">

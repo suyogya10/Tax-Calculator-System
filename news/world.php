@@ -166,6 +166,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'World' OR
 									<ul class="dropdown-menu">				
 										<li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
 										<li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
+                                        <li><a href="non-resi.php" title="Non-Resident">Non-Resident</a></li>
 									</ul>
 								</li>
 								
@@ -220,7 +221,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'World' OR
 
 								<div class="entry-cover"><a href="#"><img src="images/category-health.jpg" alt="Categories" /></a></div>
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="individual.php"><?php echo $r['newsHead'];?></a></h3>
+									<h3 class="entry-title"><a href="individual.php?nid=<?php echo $r['newsID']?>"><?php echo $r['newsHead'];?></a></h3>
 									<div class="post-meta">
 										<span><a href="#"><?php echo $r['newsTime'];?></a></span>
 										

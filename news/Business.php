@@ -1,8 +1,8 @@
 <?php
-session_start();
-require "../userlogin/config.php";
+    session_start();
+    require "../userlogin/config.php";
 
-$main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Business' ORDER BY  newsID DESC;");
+    $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Business' ORDER BY  newsID DESC;");
 
 ?>
 <!DOCTYPE html>
@@ -153,9 +153,9 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Business'
                                 <ul class="dropdown-menu">
                                     <li><a href="world.php" title="World">World</a></li>
                                     <li><a href="nepal.php" title="Nepal">Nepal</a></li>
-                                    <li><a href="finance.php" title="Finance">Finance</a></li>
+                                    <li><a href="Finance.php" title="Finance">Finance</a></li>
                                     <li><a href="sports.php" title="Sports">Sports</a></li>
-                                    <li><a href="business.php" title="Business">Business</a></li>
+                                    <li><a href="Business.php" title="Business">Business</a></li>
 
                                 </ul>
                             </li>
@@ -166,6 +166,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Business'
                                 <ul class="dropdown-menu">
                                     <li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
                                     <li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
+                                    <li><a href="non-resi.php" title="Non-Resident">Non-Resident</a></li>
                                 </ul>
                             </li>
 
@@ -192,7 +193,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Business'
             <h3>WORLD NEWS</h3>
             <ol class="breadcrumb">
                 <li><a href="index.php">Home</a></li>
-                <li class="active">WORLD</li>
+                <li class="active">Business</li>
             </ol>
         </div><!-- Container /- -->
     </div><!-- Page Banner /- -->
@@ -220,7 +221,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Business'
 
                                 <div class="entry-cover"><a href="#"><img src="images/category-health.jpg" alt="Categories" /></a></div>
                                 <div class="entry-header">
-                                    <h3 class="entry-title"><a href="individual.php"><?php echo $r['newsHead'];?></a></h3>
+                                    <h3 class="entry-title"><a href="individual.php?nid=<?php echo $r['newsID']?>"><?php echo $r['newsHead'];?></a></h3>
                                     <div class="post-meta">
                                         <span><a href="#"><?php echo $r['newsTime'];?></a></span>
 

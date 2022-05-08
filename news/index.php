@@ -332,26 +332,19 @@
 					</div>
 
                     <?php
-
                        while($r = mysqli_fetch_assoc($main))
-
-
                     {
-
-
                     ?>
 					<div class="row">
 						<div class="col-md-7 col-sm-6 col-xs-6 rcnt-review-left">
 							<div class="type-post">
 								<div class="entry-cover">
 									<a href="#"><img src="image/rcnt-review.jpg" alt="Recent" /></a>
-									<div class="rcnt-category"><a href="#"> <?php echo $r['newsCategory'];  ?></a></div>
+									<div class="rcnt-category"><a href="#"> <?php echo $r['newsCategory'];?></a></div>
 								</div>
-								<h3 class="entry-title"><a href="#"><?php echo $r['newsHead'];
-
-                                ?></a></h3>
+								<h3 class="entry-title"><a href="individual.php?nid=<?php echo $r['newsID']?>"><?php echo $r['newsHead'] ?></a></h3>
 								<div class="post-meta">
-									<div class="post-time"><a href="#">1 hour ago</a></div>
+									<div class="post-time"><a href="#"><?php echo $r['newsTime'];?></a></div>
 									
 								</div>
 								<div class="entry-content">
@@ -388,7 +381,7 @@
 									<a href="#"><img src="image/rcnt-review1.jpg" alt="Reviews" /></a>
 									<div class="rcnt-category"><a href="#"> <?php  echo $row['newsCategory']?></a></div>
 								</div>
-								<h3 class="entry-title"><a href="#"> <?php
+								<h3 class="entry-title"><a href="individual.php?nid=<?php echo $row['newsID']?>"> <?php
 
                                         if (strlen($row['newsHead']) < 50) {
                                             echo $row['newsHead'];
@@ -401,7 +394,7 @@
                                             echo $new;
                                         } ?></a></h3>
 								<div class="post-meta">
-									<div class="post-time"><a href="#">1 hour ago</a></div>
+									<div class="post-time"><a href="#"><?php echo $row['newsTime'];?></a></div>
 								
 								</div>
 							</div>
@@ -417,41 +410,41 @@
 
 			<div class="padding-50"></div>
 
-            <!-- More News --->
-			<div class="container">
-				<div class="row">
-					<div class="col-md-9 col-sm-7 content-area content_space">
-						<div class="lifestyle-bolck">
-							<h4 class="block-title">OLDER NEWS</h4>
-                            <?php
-
-                            while($mr = mysqli_fetch_assoc($more)){
-                                while($mrl = mysqli_fetch_assoc($morel)){
-
-
-                            ?>
-							<div class="row">
-								<div class="col-md-3 col-sm-12 col-xs-3 thumb-block no-padding">
-									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
-										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
-										<div class="post-date"><a href="#">Date</a></div>
-										<h3 class="entry-title"><a href="#"><?php echo $mr['newsHead']; ?>  </a></h3>
-									</div>
-								</div>
-                                <div class="col-md-5 col-sm-5 col-xs-5 thumb-block no-padding">
-                                    <div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">
-                                        <div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>
-                                        <div class="post-date"><a href="#">Date</a></div>
-                                        <h3 class="entry-title"><a href="#"><?php echo $mrl['newsHead']; ?></a></h3>
-                                    </div>
-                                </div>
-
-							</div>
-                            <?php
-                            }}
-                            ?>
-						</div>
-					</div>
+<!--            <!-- More News --->-->
+<!--			<div class="container">-->
+<!--				<div class="row">-->
+<!--					<div class="col-md-9 col-sm-7 content-area content_space">-->
+<!--						<div class="lifestyle-bolck">-->
+<!--							<h4 class="block-title">OLDER NEWS</h4>-->
+<!--                            --><?php
+//
+//                            while($mr = mysqli_fetch_assoc($more)){
+//                                while($mrl = mysqli_fetch_assoc($morel)){
+//
+//
+//                            ?>
+<!--							<div class="row">-->
+<!--								<div class="col-md-3 col-sm-12 col-xs-3 thumb-block no-padding">-->
+<!--									<div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">-->
+<!--										<div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>-->
+<!--										<div class="post-date"><a href="#">--><?php //echo $mr['newsTime'];?><!--</a></div>-->
+<!--										<h3 class="entry-title"><a href="individual.php?nid=--><?php //echo $mr['newsID']?><!--">--><?php //echo $mr['newsHead']; ?><!--  </a></h3>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--                                <div class="col-md-5 col-sm-5 col-xs-5 thumb-block no-padding">-->
+<!--                                    <div class="col-md-12 col-sm-6 col-xs-12 life-block-thumb">-->
+<!--                                        <div class="entry-cover"><a href="#"><img src="image/lifestyle-thumb1.jpg" alt="Life Style" /></a></div>-->
+<!--                                        <div class="post-date"><a href="#">--><?php //echo $mrl['newsTime'];?><!--</a></div>-->
+<!--                                        <h3 class="entry-title"><a href="individual.php?nid=--><?php //echo $mrl['newsID']?><!--">--><?php //echo $mrl['newsHead']; ?><!--</a></h3>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!---->
+<!--							</div>-->
+<!--                            --><?php
+//                            }}
+//                            ?>
+<!--						</div>-->
+<!--					</div>-->
 		</main>
 
 		<!-- Footer Section -->
