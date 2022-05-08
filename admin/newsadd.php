@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
     session_start();
     require '../userlogin/config.php';
@@ -14,8 +13,6 @@
 ?>
 
 
-=======
->>>>>>> 636a4c35d5ce530f7b63ab3d4995f4c28197df1e
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,11 +21,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-<<<<<<< HEAD
         <title>TAXMANDU - Add News </title>
-=======
-        <title>TAXMANDU - Dashboard </title>
->>>>>>> 636a4c35d5ce530f7b63ab3d4995f4c28197df1e
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -105,11 +98,7 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-<<<<<<< HEAD
                                             <a class="nav-link" href="401.php">World</a>
-=======
-                                            <a class="nav-link" href="401.php">World </a>
->>>>>>> 636a4c35d5ce530f7b63ab3d4995f4c28197df1e
                                             <a class="nav-link" href="404.php">Nepal</a>
                                             <a class="nav-link" href="500.php">Finance</a>
                                             <a class="nav-link" href="500.php">Sports</a>
@@ -118,10 +107,6 @@
                                     </div>
                                 </nav>
                             </div>
-<<<<<<< HEAD
-=======
-                            
->>>>>>> 636a4c35d5ce530f7b63ab3d4995f4c28197df1e
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
@@ -132,44 +117,26 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-<<<<<<< HEAD
                     <form method="post">
                     <div class="container-fluid px-4">
                         <h2 class="mt-4">TAXMANDU - ADD NEWS</h2>
-=======
-                    <div class="container-fluid px-4">
-                        <h2 class="mt-4">TAXMANDU - ADMIN PANNEL</h2>
->>>>>>> 636a4c35d5ce530f7b63ab3d4995f4c28197df1e
                         <h4>ADD NEWS</h4>
                         <div class="form">           
                             <div >
                                 <ol class="breadcrumb mb-4">
                                     <div class="breadcrumb-item active"><h5>News Title</h5>
-<<<<<<< HEAD
                                 <input class="one" type="text" id="title" name="title" placeholder="Title"><br>
-=======
-                                <input class="one" type="text" id="fname" name="fname" placeholder="Sports"><br>
->>>>>>> 636a4c35d5ce530f7b63ab3d4995f4c28197df1e
                                 </div>
                             </div>
                             <div >
                                 <ol class="breadcrumb mb-4">
                                     <div class="breadcrumb-item active"><h5>Category</h5>
-<<<<<<< HEAD
                                         <select class="three" name="category" id="category">
                                             <option value="World">World</option>
                                             <option value="Sports">Sports</option>
                                             <option value="Nepal">Nepal</option>
                                             <option value="Business">Business</option>
                                             <option value="Finance">Finance</option>
-=======
-                                        <select class="three" name="news" id="option">
-                                            <option value="1">World</option>
-                                            <option value="2">Sports</option>
-                                            <option value="3">Nepal</option>
-                                            <option value="4">Business</option>
-                                            <option value="5">Finance</option>
->>>>>>> 636a4c35d5ce530f7b63ab3d4995f4c28197df1e
                                         </select>
                                         <br>
                                 </div>
@@ -178,7 +145,6 @@
                             <div >
                                 <ol class="breadcrumb mb-4">
                                     <div class="breadcrumb-item active"><h5>Detail</h5>
-<<<<<<< HEAD
                                         <textarea class="News" type="text" id="detail" name="detail" ></textarea><br>
                                 </div>
                             </div>
@@ -189,16 +155,6 @@
                         </div>
                     </form>
                 </main>
-=======
-                                        <textarea class="News" type="text" id="fname" name="fname" ></textarea><br>
-                                </div>
-                            </div>
-                            <div>
-                                <button type="button" class="btn-outline-dark">ADD</button>
-                            </div>
-
-                        </div>
->>>>>>> 636a4c35d5ce530f7b63ab3d4995f4c28197df1e
 
                         <div class="row">
                             <div class="col-xl-6">
@@ -265,11 +221,7 @@
 }
 
 </style>
-<<<<<<< HEAD
 
-=======
-                </main>
->>>>>>> 636a4c35d5ce530f7b63ab3d4995f4c28197df1e
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         
