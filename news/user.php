@@ -56,6 +56,7 @@
 				</div>
 			</div>
 		</div>
+    </div>
 
 		<!-- Header Section -->
 		<header class="container-fluid no-padding header-section header-section1">

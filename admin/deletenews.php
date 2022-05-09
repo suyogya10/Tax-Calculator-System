@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    require '../userlogin/config.php';
+    if(isset($_POST['delnews'])){
+
+        $nid = $_POST['nid'];
+        $sql = "DELETE FROM `news` WHERE `newsID` = '$nid'";
+        mysqli_query($con, $sql);
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -72,8 +83,9 @@
                                     </a>-->
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.php">Vehicle Tax</a>
-                                            <a class="nav-link" href="register.php">Income Tax</a>
+                                            <a class="nav-link" href="../news/vehicle-tax.php">Vehicle Tax </a>
+                                            <a class="nav-link" href="../news/calculator.php">Income Tax</a>
+                                            <a class="nav-link" href="../news/non-resi.php">Non-Resident Tax</a>
                                             
                                         </nav>
                                     </div>
@@ -83,11 +95,11 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.php">World </a>
-                                            <a class="nav-link" href="404.php">Nepal</a>
-                                            <a class="nav-link" href="500.php">Finance</a>
-                                            <a class="nav-link" href="500.php">Sports</a>
-                                            <a class="nav-link" href="500.php">Business</a>
+                                            <a class="nav-link" href="../news/world.php">World </a>
+                                            <a class="nav-link" href="../news/nepal.php">Nepal</a>
+                                            <a class="nav-link" href="../news/Finance.php">Finance</a>
+                                            <a class="nav-link" href="../news/sports.php">Sports</a>
+                                            <a class="nav-link" href="../news/Business.php">Business</a>
                                         </nav>
                                     </div>
                                 </nav>
@@ -103,22 +115,25 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
+                    <form method="post">
                     <div class="container-fluid px-4">
                         <h2 class="mt-4">TAXMANDU - ADMIN PANNEL</h2>
                         <h4>DELETE NEWS</h4>
                         <div class="form">           
                             <div >
-                                <ol class="breadcrumb mb-4">
-                                    <div class="breadcrumb-item active"><h5>News ID</h5>
-                                <input class="one" type="text" id="fname" name="fname" placeholder="33"><br>
+                                <div class="breadcrumb-item active"><h5>Enter a news id to delete:</h5>
+                                <input class="one" type="text" id="nid" name="nid" placeholder="News ID"><br>
                                 </div>
                             </div>
-                            
+                            <br>
                             <div>
-                                <button type="button" class="btn-outline-dark">Delete</button>
+                                <button type="submit" class="btn-outline-dark" id="delnews" name="delnews">Delete</button>
                             </div>
 
                         </div>
+                    </div>
+                    </form>
+                </main>
 
                         <div class="row">
                             <div class="col-xl-6">
@@ -186,7 +201,7 @@
 }
 
 </style>
-                </main>
+
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         

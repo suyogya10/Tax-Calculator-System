@@ -55,9 +55,9 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="../News/vehicle-tax.php">Vehicle Tax </a>
-                                    <a class="nav-link" href="../News/calculator.php">Income Tax</a>
-                                    <a class="nav-link" href="../News/non-resi.php">Non-Resident Tax</a>
+                                    <a class="nav-link" href="../news/vehicle-tax.php">Vehicle Tax </a>
+                                    <a class="nav-link" href="../news/calculator.php">Income Tax</a>
+                                    <a class="nav-link" href="../news/non-resi.php">Non-Resident Tax</a>
 
                                 </nav>
                             </div>
@@ -74,11 +74,11 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="../News/world.php">World </a>
-                                            <a class="nav-link" href="../News/nepal.php">Nepal</a>
-                                            <a class="nav-link" href="../News/Finance.php">Finance</a>
-                                            <a class="nav-link" href="../News/sports.php">Sports</a>
-                                            <a class="nav-link" href="../News/Business.php">Business</a>
+                                            <a class="nav-link" href="../news/world.php">World </a>
+                                            <a class="nav-link" href="../news/nepal.php">Nepal</a>
+                                            <a class="nav-link" href="../news/Finance.php">Finance</a>
+                                            <a class="nav-link" href="../news/sports.php">Sports</a>
+                                            <a class="nav-link" href="../news/Business.php">Business</a>
                                         </nav>
                                     </div>
                                 </nav>

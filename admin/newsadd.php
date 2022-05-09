@@ -6,7 +6,7 @@
         $title = $_POST['title'];
         $category = $_POST['category'];
         $detail = $_POST['detail'];
-        $sql = "INSERT INTO `news`(`newsHead`, `newsBody`, `newsCategory`) VALUES ('$title','$detail', '$category')";
+        $sql = "INSERT INTO `news`(`newsHead`, `newsBody`, `newsCategory`) VALUES ('$title','$detail', '$category');";
         mysqli_query($con, $sql);
     }
 
@@ -87,8 +87,9 @@
                                     </a>-->
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.php">Vehicle Tax</a>
-                                            <a class="nav-link" href="register.php">Income Tax</a>
+                                            <a class="nav-link" href="../news/vehicle-tax.php">Vehicle Tax </a>
+                                            <a class="nav-link" href="../news/calculator.php">Income Tax</a>
+                                            <a class="nav-link" href="../news/non-resi.php">Non-Resident Tax</a>
                                             
                                         </nav>
                                     </div>
@@ -98,11 +99,11 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.php">World</a>
-                                            <a class="nav-link" href="404.php">Nepal</a>
-                                            <a class="nav-link" href="500.php">Finance</a>
-                                            <a class="nav-link" href="500.php">Sports</a>
-                                            <a class="nav-link" href="500.php">Business</a>
+                                            <a class="nav-link" href="../news/world.php">World </a>
+                                            <a class="nav-link" href="../news/nepal.php">Nepal</a>
+                                            <a class="nav-link" href="../news/Finance.php">Finance</a>
+                                            <a class="nav-link" href="../news/sports.php">Sports</a>
+                                            <a class="nav-link" href="../news/Business.php">Business</a>
                                         </nav>
                                     </div>
                                 </nav>

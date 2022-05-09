@@ -3,6 +3,7 @@
     require "../userlogin/config.php";
     $postid= intval($_GET['nid']);
     $main = mysqli_query($con, "SELECT * FROM news WHERE `newsID` = '$postid';");
+    $sub = mysqli_query($con, "SELECT * FROM cmts WHERE `newsID` = '$postid';");
 
     if(isset($_POST['addcmt'])){
     $fname = $_POST['fname'];
@@ -10,7 +11,7 @@
     $cmt = $_POST['cmt'];
     $sql = "INSERT INTO `cmts`(`fname`, `email`, `comment`,`newsID`) VALUES ('$fname','$email', '$cmt','$postid')";
     mysqli_query($con, $sql);
-}
+    }
 
 ?>
 <!DOCTYPE html>
@@ -183,7 +184,7 @@
 									</ul>
 								</li>
 								
-								<li><a href="#" title="About-us">About Us</a></li>
+								<li><a href="about.php" title="About-us">About Us</a></li>
 								
 							</ul>
 						</div><!--/.nav-collapse -->
@@ -246,55 +247,45 @@
 
 						<!-- Widget: Latest Posts -->
 
-						<aside class="widget widget_latestposts">
-                            <form method="post">
-							<h3 class="widget-title">Comment</h3>
-							<div >
-                                <ol class="breadcrumb mb-4">
+						<aside class="widget widget_latestposts" style="text-align: justify">
+                            <form method="post"  action=" " onSubmit="window.location.reload()>
+							<h3 class="widget-title">Post Comment</h3>
+							<div class="side">
                                     <div class="breadcrumb-item active"><h5>Full Name</h5>
                                 <input class="one" type="text" id="fname" name="fname" placeholder=""><br>
                             </div>
+                            </div>
 							<div class="side">
-                                <ol class="breadcrumb mb-4">
                                     <div class="breadcrumb-item active"><h5>Email</h5>
                                 <input class="one" type="text" id="email" name="email" placeholder=""><br>
                             </div>
+                            </div>
 							<div class="side">
-                                <ol class="breadcrumb mb-4">
                                     <div class="breadcrumb-item active"><h5>Comment</h5>
                                 <textarea class="two" type="text" id="cmt" name="cmt" placeholder=""></textarea><br>
                             </div>
                             <div>
-                                <button type="submit" class="btn-outline-dark" id="addcmt" name="addnews">ADD</button>
+                            </div>
+                                <br>
+                                <button type="submit" class="btn-outline-dark" id="addcmt" name="addcmt">ADD</button>
                             </div>
                         </form>
-
-						</aside>
+                        </aside>
                        <!-- Comment: Latest Posts /- -->
 
 
-						<aside class="widget widget_latestposts">
+						<aside class="widget widget_latestposts">COMMENTS
 							
-							<div >
-                                <ol class="breadcrumb mb-4">
-
-                                    <div class="breadcrumb-item active"><h4>Name</h4><h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio?</h5>
-                                
+							<div style="background-color: #ebf2ff">
+                                <?php
+                                while($mr = mysqli_fetch_assoc($sub))
+                                {
+                                ?>
+                                <br>
+                                <div class="breadcrumb-item active" style="text-align: center"><h4><?php echo $mr['fname'];?>:</h4>
+                                    <div><h5><?php echo $mr['comment'];?></h5></div>
+                                <?php } ?>
                             </div>
-							<div >
-                                <ol class="breadcrumb mb-4">
-
-                                    <div id="side" class="breadcrumb-item active"><h4>Name</h4><h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio?</h5>
-                                
-                            </div>
-							<div >
-                                <ol id="sidee" class="breadcrumb mb-4">
-
-                                    <div class="breadcrumb-item active"><h4>Name</h4><h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio?</h5>
-                                
-                            </div>
-							
-                        
 
 							
 						</aside><!-- Comment: Latest Posts /- -->
