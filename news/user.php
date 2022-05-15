@@ -56,7 +56,6 @@
 				</div>
 			</div>
 		</div>
-    </div>
 
 		<!-- Header Section -->
 		<header class="container-fluid no-padding header-section header-section1">
@@ -163,9 +162,9 @@
 									<ul class="dropdown-menu">				
 										<li><a href="world.php" title="World"></a></li>
 										<li><a href="nepal.php" title="Nepal"></a></li>
-										<li><a href="Finance.php" title="Finance"></a></li>
+										<li><a href="finance.php" title="Finance"></a></li>
 										<li><a href="sports.php" title="Sports"></a></li>
-										 <li><a href="Business.php" title="Business"></a></li>
+										 <li><a href="business.php" title="Business"></a></li>
 										
 									</ul>
 								</li>
@@ -176,7 +175,6 @@
 									<ul class="dropdown-menu">				
 										<li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
 										<li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
-                                        <li><a href="non-resi.php" title="Non-Resident">Non-Resident</a></li>
 									</ul>
 								</li>
 								
@@ -210,6 +208,9 @@
 		</div><!-- Page Banner /- -->
 </head>
 <style>
+	.row{
+		font-weight:bold;
+	}
     table, th, td {
         border:1px solid black;
     }
@@ -221,7 +222,7 @@
     </div>
 
 <table style="width:100%">
-    <tr class="row">
+    <tr class="roww">
         <th > Email</th>
         <th> Income Tax </th>
         <th> Vehicle Tax </th>
@@ -252,10 +253,11 @@
         color: black;
         }
     
-    .row{
-        font-size: 20px;
-        background: ;
+    /* .row{
+        font-size: 14px;
+        background-color: #96D4D4;
         color: black;
+        text-align: center;
         
         
     }
@@ -271,7 +273,7 @@
         background-color: #96D4D4;
         color: black;
         text-align: center;
-    }
+    } */
     
     .home{
         background-color: #2D9CDB;
@@ -298,7 +300,7 @@
         box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
     }
 	.marginnnn{
-		margin-top: 250px;
+		margin-top: 570px;
 	}
     
 </style>
