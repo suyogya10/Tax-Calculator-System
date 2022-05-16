@@ -309,14 +309,14 @@
 
             <label class="stu">Yearly Salary:</label>
             <label class="side">Citizen Investment Trust:</label><br>
-            <input class="spacee" type="text" id="ysal" name="ysal" required>
-            <input class="cit" type="text" id="cit" name="cit" value="0"><br>
+            <input class="spacee" type="text" id="ysal" name="ysal" value="<?php if(!empty($_POST['ysal'])){ echo $_POST['ysal']; }  ?>"required>
+            <input class="cit" type="text" id="cit" name="cit" value="<?php if(!empty($_POST['ysal'])){ echo $_POST['cit']; }  ?>"><br>
 
             <label class="stu">Yearly Bonus:</label>
             <label class="side">Insurance:</label><br>
-            <input class="spacee" type="text" id="ybonus" name="ybonus" value="0">
+            <input class="spacee" type="text" id="ybonus" name="ybonus" value="<?php if(!empty($_POST['ysal'])){ echo $_POST['ybonus']; }  ?>">
             
-            <input class="insu" type="text" id="insu" name="insu" value="0"><br><br>
+            <input class="insu" type="text" id="insu" name="insu" value="<?php if(!empty($_POST['ysal'])){ echo $_POST['insu']; }  ?>"><br><br>
 			<div>
 				<input class="rest" type="submit" value="Reset" name="Reset" value="1">
 				<input class="calcu" type="submit" value="Calculate" name="calculate" value="0">	
