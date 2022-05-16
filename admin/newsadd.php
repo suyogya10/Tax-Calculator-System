@@ -12,7 +12,9 @@ if(isset($_POST['addnews'])){
     $photo = '../news/uploads/'.$pic;
     if(move_uploaded_file($_FILES['thumb']['tmp_name'], $photo)){
         $query = "INSERT INTO `news`(`newsHead`, `newsBody`, `newsCategory`,`photo`) VALUES ('$title','$detail', '$category','$pic')";
-        mysqli_query($con, $query) or die($con -> error);
+        if(mysqli_query($con, $query)){
+            $success = "News  Added Successfully.</a>";
+        }
     }else{
         die("Picture Not Uploaded Go back and try again");
     }
@@ -127,6 +129,14 @@ if(isset($_POST['addnews'])){
     <div id="layoutSidenav_content">
         <main>
             <form method="post" enctype="multipart/form-data">
+                <?php
+                if(!empty($success)):
+
+                echo"<div class='alert alert-success' role='alert'>"
+                 . $success .
+                 "</div>";
+                  endif;
+                ?>
                 <div class="container-fluid px-4">
                     <h2 class="mt-4">TAXMANDU - ADD NEWS</h2>
                     <h4>ADD NEWS</h4>
@@ -240,6 +250,7 @@ if(isset($_POST['addnews'])){
     </footer>
 </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
