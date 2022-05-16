@@ -1,3 +1,10 @@
+<?php
+
+include("../userlogin/config.php");
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="">
 <head>
@@ -233,6 +240,23 @@
 				</ol>
 			</div><!-- Container /- -->
 		</div><!-- Page Banner /- -->
+
+        <?php
+
+        if(isset($_POST['add'])){
+
+            $email = $_SESSION['islogged'];
+            $head = $_POST['fname'];
+            $body = $_POST['body'];
+            $category = $_POST['cate'];
+            $sql = "INSERT INTO `requests`(`user_email`, `newsHead`, `newsBody`, `status`, `category`) VALUES ('$email','$head','$body','0','$category')";
+            mysqli_query($con, $sql);
+
+        }
+
+
+
+        ?>
 		
 		<main>
 			
@@ -246,7 +270,8 @@
 						
 						<h3></style>ADD NEWS</h3>
 					</div><!-- Section Header /- -->
-                    
+
+                    <form method="POST">
                         <div>           
                             <div >
                                 <ol class="breadcrumb mb-4">
@@ -257,12 +282,12 @@
                             <div >
                                 <ol class="breadcrumb mb-4">
                                     <div class="breadcrumb-item active"><h5>Category</h5>
-                                        <select class="three" name="news" id="option">
-                                            <option value="1">World</option>
-                                            <option value="2">Sports</option>
-                                            <option value="3">Nepal</option>
-                                            <option value="4">Business</option>
-                                            <option value="5">Finance</option>
+                                        <select class="three" name="cate" id="option">
+                                            <option value="World">World</option>
+                                            <option value="Sports">Sports</option>
+                                            <option value="Nepal">Nepal</option>
+                                            <option value="Business">Business</option>
+                                            <option value="Finance">Finance</option>
                                         </select>
                                         <br>
                                 </div>
@@ -271,15 +296,15 @@
                             <div >
                                 <ol class="breadcrumb mb-4">
                                     <div class="breadcrumb-item active"><h5>Detail</h5>
-                                        <textarea class="News" type="text" id="fname" name="fname" ></textarea><br>
+                                        <textarea class="News" type="text" id="fname" name="body" ></textarea><br>
                                 </div>
                             </div>
                             <div>
-                                <button type="button" class="btn-outline-darkk">ADD</button>
+                                <button type="submit" name="add" class="btn-outline-darkk">ADD</button>
                             </div>
 
                         </div>
-					
+                    </form>
 					<style>
 						
 					</style>

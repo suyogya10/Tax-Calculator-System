@@ -62,8 +62,8 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.php">Vehicle Tax </a>
-                                    <a class="nav-link" href="layout-sidenav-light.php">Income Tax</a>
+                                    <a class="nav-link" href="changerate.php">Update Vehicle Tax </a>
+                                    <a class="nav-link" href="../news/calculator.php">Income Tax</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -79,8 +79,9 @@
                                     </a>-->
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.php">Vehicle Tax</a>
+                                            <a class="nav-link" href="changerate.php">Update Vehicle Tax</a>
                                             <a class="nav-link" href="register.php">Income Tax</a>
+                                            <a class="nav-link" href="register.php">Non-Resident Tax</a>
                                             
                                         </nav>
                                     </div>

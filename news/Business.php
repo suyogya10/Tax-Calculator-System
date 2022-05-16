@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    require "../userlogin/config.php";
+session_start();
+require "../userlogin/config.php";
 
-    $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Business' ORDER BY  newsID DESC;");
+$main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Business' ORDER BY  newsID DESC;");
 
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>WORLD - TAXMANDU</title>
+    <title>Business - TAXMANDU</title>
     <!-- Standard Favicon -->
     <link rel="icon" type="image/x-icon" href="images//favicon.ico" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images//apple-touch-icon-114x114-precomposed.png">
@@ -190,7 +190,7 @@
     <div class="container-fluid no-padding page-banner">
         <!-- Container -->
         <div class="container">
-            <h3>WORLD NEWS</h3>
+            <h3>Business NEWS</h3>
             <ol class="breadcrumb">
                 <li><a href="index.php">Home</a></li>
                 <li class="active">Business</li>
@@ -219,7 +219,7 @@
 
                             <div class="category-full-box">
 
-                                <div class="entry-cover"><a href="#"><img src="images/category-health.jpg" alt="Categories" /></a></div>
+                                <div class="entry-cover"><a href="#"><img src="./uploads/<?php echo $r['photo'];  ?>" alt="Categories" /></a></div>
                                 <div class="entry-header">
                                     <h3 class="entry-title"><a href="individual.php?nid=<?php echo $r['newsID']?>"><?php echo $r['newsHead'];?></a></h3>
                                     <div class="post-meta">
@@ -243,7 +243,7 @@
                         <!-- About Widget -->
                         <div class="ftr-widget ftr_widget_about">
                             <h3>ABOUT US</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae fugit minus sapiente, assumenda officia sint consectetur quaerat deserunt corrupti porro et quod molestias, enim dicta?</p>
+                            <p>This is a project by Group 3 of L5CG4</p>
 
                         </div><!-- About Widget /- -->
                     </div><!-- Widget Block /- -->

@@ -219,7 +219,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Nepal' OR
 
                             <div class="category-full-box">
 
-                                <div class="entry-cover"><a href="#"><img src="images/category-health.jpg" alt="Categories" /></a></div>
+                                <div class="entry-cover"><a href="#"><img src="./uploads/<?php echo $r['photo'];  ?>" alt="Categories" /></a></div>
                                 <div class="entry-header">
                                     <h3 class="entry-title"><a href="individual.php?nid=<?php echo $r['newsID']?>"><?php echo $r['newsHead'];?></a></h3>
                                     <div class="post-meta">

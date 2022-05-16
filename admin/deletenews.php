@@ -83,7 +83,7 @@
                                     </a>-->
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="../news/vehicle-tax.php">Vehicle Tax </a>
+                                            <a class="nav-link" href="./changerate.php">Update Vehicle Tax </a>
                                             <a class="nav-link" href="../news/calculator.php">Income Tax</a>
                                             <a class="nav-link" href="../news/non-resi.php">Non-Resident Tax</a>
                                             

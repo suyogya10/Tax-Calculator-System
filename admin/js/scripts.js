@@ -5,7 +5,17 @@
     */
     // 
 // Scripts
-// 
+//
+
+
+
+var drop = document.getElementById("topic");
+drop.addEventListener("change", function (event){
+
+    document.getElementById("hide").value = drop.value;
+
+})
+
 
 window.addEventListener('DOMContentLoaded', event => {
 

@@ -1,3 +1,11 @@
+<?php
+
+include ("../userlogin/config.php");
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -129,51 +137,70 @@
 	<body>
 	
 	
-	
+    <?php
+
+
+
+    if(isset($_POST['approve'])){
+
+        $uid = $_POST['approve'];
+        $sql = "SELECT * FROM requests WHERE request_id = '$uid'";
+        $result = mysqli_query($con, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $newsBody = $row['newsBody'];
+        $newsHead = $row['newsHead'];
+        $category = $row['category'];
+        $date = date("Y-m-d h:i:s");
+        $sql1 = "INSERT INTO `news`(`newsHead`, `newsBody`, `newsCategory`, `newsTime`, `photo`) VALUES ('$newsHead','$newsBody','$category','$date','image.png')";
+        mysqli_query($con, $sql1);
+        $sql2 = "DELETE FROM requests WHERE request_id = '$uid'";
+        mysqli_query($con, $sql2);
+
+    }
+
+    if(isset($_POST['deny'])){
+
+        $uid = $_POST['deny'];
+        $sql2 = "DELETE FROM requests WHERE request_id = '$uid'";
+        mysqli_query($con, $sql2);
+
+    }
+
+
+
+
+    ?>
+    <form method="post">
 	<table>
 	  <tr>
-		<th>Post</th>
+		<th>Request Id</th>
 		<th>Email</th>
 		<th>Name</th>
+          <th> Category </th>
 		<th>Status</th>
 	  </tr>
+
+        <?php
+
+        $sql = "SELECT * FROM requests";
+        $result = mysqli_query($con, $sql);
+        while($row = mysqli_fetch_assoc($result)){
+        ?>
 	  <tr>
-		<td>Alfreds Futterkiste</td>
-		<td>Maria Anders</td>
-		<td>Germany</td>
-		<td><button class="btn-outline-darkkk" type="button">Approve</button><button class="btn-outline-darkkkk" type="button">Decline</button> </td>
+
+		<td><?php echo $row['request_id'];?></td>
+		<td><?php echo $row['user_email'];?></td>
+		<td><?php echo $row['newsHead'];?></td>
+          <td><?php echo $row['category'];?></td>
+		<td><button class="btn-outline-darkkk" name="approve" type="submit" value="<?php echo $row['request_id'];?>">Approve</button><button class="btn-outline-darkkkk" name="deny" type="submit" value="<?php echo $row['request_id'];?>">Decline</button> </td>
 	  </tr>
-	  <tr>
-		<td>Centro comercial Moctezuma</td>
-		<td>Francisco Chang</td>
-		<td>Mexico</td>
-		<td><button class="btn-outline-darkkk" type="button">Approve</button><button class="btn-outline-darkkkk" type="button">Decline</button> </td>
-	  </tr>
-	  <tr>
-		<td>Ernst Handel</td>
-		<td>Roland Mendel</td>
-		<td>Austria</td>
-		<td><button class="btn-outline-darkkk" type="button">Approve</button><button class="btn-outline-darkkkk" type="button">Decline</button> </td>
-	  </tr>
-	  <tr>
-		<td>Island Trading</td>
-		<td>Helen Bennett</td>
-		<td>UK</td>
-		<td><button class="btn-outline-darkkk" type="button">Approve</button><button class="btn-outline-darkkkk" type="button">Decline</button> </td>
-	  </tr>
-	  <tr>
-		<td>Laughing Bacchus Winecellars</td>
-		<td>Yoshi Tannamuri</td>
-		<td>Canada</td>
-		<td><button class="btn-outline-darkkk" type="button">Approve</button><button class="btn-outline-darkkkk" type="button">Decline</button> </td>
-	  </tr>
-	  <tr>
-		<td>Magazzini Alimentari Riuniti</td>
-		<td>Giovanni Rovelli</td>
-		<td>Italy</td>
-		<td><button class="btn-outline-darkkk" type="button">Approve</button><button class="btn-outline-darkkkk" type="button">Decline</button> </td>
-	  </tr>
+
+        <?php
+
+        }
+        ?>
 	</table>
+    </form>
 	
 	
 	
