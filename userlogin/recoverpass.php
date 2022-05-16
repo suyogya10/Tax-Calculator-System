@@ -61,11 +61,11 @@ if(isset($_POST['change'])){
             Enter New Password!!
         </div>
         <div class="">
-            <input class="login-input" class="form-control" id="inputEmail" name="pass" type="password" placeholder="Password" />
+            <input class="login-input" class="form-control" id="inputEmail" name="pass" type="password" placeholder="Password" required />
             <!-- <label for="inputEmail">Email address</label>-->
         </div>
         <div class="">
-            <input class="login-input" class="form-control" id="inputEmail" name="cpass" type="password" placeholder="Confirm Password" />
+            <input class="login-input" class="form-control" id="inputEmail" name="cpass" type="password" placeholder="Confirm Password" required/>
             <!-- <label for="inputEmail">Email address</label>-->
         </div>
 

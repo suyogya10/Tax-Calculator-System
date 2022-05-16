@@ -66,11 +66,11 @@
 		  </div>
 		  <div class="login-input-parts">
               
-            <input class="login-input" placeholder="First Name" name="fname"/>
-            <input class="login-input" placeholder="Last Name" name="lname"/>
-			<input class="login-input" placeholder="Email Address" name="email"/>
-			<input class="login-input" placeholder="Password" name="pass" type="password"/>
-              <input class="login-input" placeholder="Password" name="cpass" type="password"/>
+            <input class="login-input" placeholder="First Name" name="fname" required/>
+            <input class="login-input" placeholder="Last Name" name="lname" required/>
+			<input class="login-input" placeholder="Email Address" name="email" type="email" required/>
+			<input class="login-input" placeholder="Password" name="pass" type="password" required/>
+              <input class="login-input" placeholder="Password" name="cpass" type="password" required/>
 			<input class="login-input button" type="submit" value="Sign Up" name="signup"/>
 		  </div>
 		</div>
