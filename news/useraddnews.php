@@ -187,11 +187,11 @@ session_start();
 						<div class="navbar-collapse collapse" id="navbar">
 							<ul class="nav navbar-nav menu-open">
 								<li class=" dropdown">
-									<!---<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a> --->
+									<a href="index.php" title="Home" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 								</li>
 								<li class="dropdown">
-									<!--- <a href="" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a> --->
+									<a href="" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
 										<li><a href="world.php" title="World"></a></li>
@@ -209,6 +209,7 @@ session_start();
 									<ul class="dropdown-menu">				
 										<li><a href="calculator.php" title="Income-Tax">Income-Tax</a></li>
 										<li><a href="vehicle-tax.php" title="Vehicle-Tax">Vehicle-Tax</a></li>
+                                        <li><a href="non-resi.php" title="Vehicle-Tax">Non-Resident</a></li>
 									</ul>
 								</li>
 								

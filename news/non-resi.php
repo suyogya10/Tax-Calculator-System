@@ -146,11 +146,11 @@ if(isset($_POST['calculate'])){
 									<a href="#" title="news" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">News</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">				
-										<li><a href="World.php" title="World">World</a></li>
-										<li><a href="Nepal.php" title="Nepal">Nepal</a></li>
-										<li><a href="Finance.php" title="Finance">Finance</a></li>
-										<li><a href="Sports.php" title="Sports">Sports</a></li>
-										<li><a href="Business.php" title="Business">Business</a></li>
+										<li><a href="world.php" title="World">World</a></li>
+										<li><a href="nepal.php" title="Nepal">Nepal</a></li>
+										<li><a href="finance.php" title="Finance">Finance</a></li>
+										<li><a href="sports.php" title="Sports">Sports</a></li>
+										<li><a href="business.php" title="Business">Business</a></li>
 										
 									</ul>
 								</li>

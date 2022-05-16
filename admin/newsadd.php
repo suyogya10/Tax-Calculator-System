@@ -109,9 +109,9 @@ if(isset($_POST['addnews'])){
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="../news/world.php">World </a>
                                     <a class="nav-link" href="../news/nepal.php">Nepal</a>
-                                    <a class="nav-link" href="../news/Finance.php">Finance</a>
+                                    <a class="nav-link" href="../news/finance.php">Finance</a>
                                     <a class="nav-link" href="../news/sports.php">Sports</a>
-                                    <a class="nav-link" href="../news/Business.php">Business</a>
+                                    <a class="nav-link" href="../news/business.php">Business</a>
                                 </nav>
                             </div>
                         </nav>

@@ -171,6 +171,7 @@
 
                                     <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
                                     <a href="http://localhost/tcs/news/user.php"><button type="button" class="btn-outline-dark">History</button></a>
+                                    <a href="http://localhost/tcs/news/useraddnews.php"><button  class="btn-outline-dark"> Add News </button></a>
                                     <?php
                                 }
                                 ?>
@@ -308,7 +309,7 @@
 
             <label class="stu">Yearly Salary:</label>
             <label class="side">Citizen Investment Trust:</label><br>
-            <input class="spacee" type="text" id="ysal" name="ysal">
+            <input class="spacee" type="text" id="ysal" name="ysal" required>
             <input class="cit" type="text" id="cit" name="cit" value="0"><br>
 
             <label class="stu">Yearly Bonus:</label>

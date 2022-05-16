@@ -13,7 +13,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Sports' O
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>WORLD - TAXMANDU</title>
+    <title>SPORTS - TAXMANDU</title>
     <!-- Standard Favicon -->
     <link rel="icon" type="image/x-icon" href="images//favicon.ico" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images//apple-touch-icon-114x114-precomposed.png">
@@ -77,6 +77,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Sports' O
 
                                 <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
                                 <a href="http://localhost/tcs/news/user.php"><button type="button" class="btn-outline-dark">History</button></a>
+                                <a href="http://localhost/tcs/news/useraddnews.php"><button  class="btn-outline-dark"> Add News </button></a>
                                 <?php
                             }
                             ?>
@@ -190,7 +191,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Sports' O
     <div class="container-fluid no-padding page-banner">
         <!-- Container -->
         <div class="container">
-            <h3>WORLD NEWS</h3>
+            <h3>SPORTS NEWS</h3>
             <ol class="breadcrumb">
                 <li><a href="index.php">Home</a></li>
                 <li class="active">Sports</li>
@@ -219,7 +220,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Sports' O
 
                             <div class="category-full-box">
 
-                                <div class="entry-cover"><a href="#"><img src="images/category-health.jpg" alt="Categories" /></a></div>
+                                <div class="entry-cover"><a href="#"><img src="./uploads/<?php echo $r['photo'];  ?>" alt="Categories" /></a></div>
                                 <div class="entry-header">
                                     <h3 class="entry-title"><a href="individual.php?nid=<?php echo $r['newsID']?>"><?php echo $r['newsHead'];?></a></h3>
                                     <div class="post-meta">

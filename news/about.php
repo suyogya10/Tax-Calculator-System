@@ -89,6 +89,7 @@ error_reporting(0);
 
                                 <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
                                 <a href="http://localhost/tcs/news/user.php"><button type="button" class="btn-outline-dark">History</button></a>
+                                <a href="http://localhost/tcs/news/useraddnews.php"><button  class="btn-outline-dark"> Add News </button></a>
                                 <?php
                             }
                             ?>
@@ -162,9 +163,9 @@ error_reporting(0);
                                 <ul class="dropdown-menu">
                                     <li><a href="world.php" title="World"></a></li>
                                     <li><a href="nepal.php" title="Nepal"></a></li>
-                                    <li><a href="Finance.php" title="Finance"></a></li>
+                                    <li><a href="finance.php" title="Finance"></a></li>
                                     <li><a href="sports.php" title="Sports"></a></li>
-                                    <li><a href="Business.php" title="Business"></a></li>
+                                    <li><a href="business.php" title="Business"></a></li>
 
                                 </ul>
                             </li>
@@ -288,7 +289,7 @@ error_reporting(0);
                         <!-- About Widget -->
                         <div class="ftr-widget ftr_widget_about">
                             <h3>ABOUT US</h3>
-                            <p>A small project by L5CG4 Students</p>
+                            <p>This is a project by Group 3 of L5CG4</p>
 
                         </div><!-- About Widget /- -->
                     </div><!-- Widget Block /- -->

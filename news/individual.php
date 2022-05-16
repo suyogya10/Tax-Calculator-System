@@ -94,6 +94,7 @@ if(isset($_POST['addcmt'])){
 
                                 <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
                                 <a href="http://localhost/tcs/news/user.php"><button type="button" class="btn-outline-dark">History</button></a>
+                                <a href="http://localhost/tcs/news/useraddnews.php"><button  class="btn-outline-dark"> Add News </button></a>
                                 <?php
                             }
                             ?>
@@ -168,9 +169,9 @@ if(isset($_POST['addcmt'])){
 
                                     <li><a href="world.php" title="World">World</a></li>
                                     <li><a href="nepal.php" title="Nepal">Nepal</a></li>
-                                    <li><a href="Finance.php" title="Finance">Finance</a></li>
+                                    <li><a href="finance.php" title="Finance">Finance</a></li>
                                     <li><a href="sports.php" title="Sports">Sports</a></li>
-                                    <li><a href="Business.php" title="Business">Business</a></li>
+                                    <li><a href="business.php" title="Business">Business</a></li>
 
                                 </ul>
                             </li>

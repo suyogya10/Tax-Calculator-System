@@ -77,6 +77,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Nepal' OR
 
                                 <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
                                 <a href="http://localhost/tcs/news/user.php"><button type="button" class="btn-outline-dark">History</button></a>
+                                <a href="http://localhost/tcs/news/useraddnews.php"><button  class="btn-outline-dark"> Add News </button></a>
                                 <?php
                             }
                             ?>
@@ -190,7 +191,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Nepal' OR
     <div class="container-fluid no-padding page-banner">
         <!-- Container -->
         <div class="container">
-            <h3>WORLD NEWS</h3>
+            <h3>NEPAL NEWS</h3>
             <ol class="breadcrumb">
                 <li><a href="index.php">Home</a></li>
                 <li class="active">Nepal</li>
@@ -243,7 +244,7 @@ $main = mysqli_query($con, "SELECT * FROM news WHERE `newsCategory` = 'Nepal' OR
                         <!-- About Widget -->
                         <div class="ftr-widget ftr_widget_about">
                             <h3>ABOUT US</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae fugit minus sapiente, assumenda officia sint consectetur quaerat deserunt corrupti porro et quod molestias, enim dicta?</p>
+                            <p>This is a project by Group 3 of L5CG4</p>
 
                         </div><!-- About Widget /- -->
                     </div><!-- Widget Block /- -->

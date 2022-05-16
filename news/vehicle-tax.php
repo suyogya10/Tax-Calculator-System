@@ -10,16 +10,45 @@
             $pradesh = $_POST['Pradesh'];
             $cc = $_POST['cc'];
 
-            $sql1 = "SELECT * FROM vehicle_tax WHERE province = '$pradesh'";
-            $result = mysqli_query($con, $sql1);
-            while($row = mysqli_fetch_assoc($result)){
-
-             if($row['range_cc'] == $cc){
-
-                 $price = $row['price'];
-
-             }
-
+            if($pradesh == "3"){
+                if($cc <= 125){
+                    $price = "Rs 2800";
+                }
+                elseif ($cc <=160 ){
+                    $price = "Rs 6000";
+                }
+                elseif ($cc <=225 ){
+                    $price = "Rs 8000";
+                }
+                elseif ($cc <=400 ){
+                    $price = "Rs 11000";
+                }
+                elseif ($cc <=650 ){
+                    $price = "Rs 20000";
+                }
+                elseif ($cc >=650 ){
+                    $price = "Rs 30000";
+                }
+            }
+            else{
+                if($cc <= 125){
+                    $price = "Rs 2800";
+                }
+                elseif ($cc <=160 ){
+                    $price = "Rs 4500";
+                }
+                elseif ($cc <=250 ){
+                    $price = "Rs 5500";
+                }
+                elseif ($cc <=400 ){
+                    $price = "Rs 9000";
+                }
+                elseif ($cc <=650 ){
+                    $price = "Rs 20000";
+                }
+                elseif ($cc >=650 ){
+                    $price = "Rs 30000";
+                }
             }
 
             $email = $_SESSION['islogged'];
@@ -87,7 +116,7 @@
 								
 							</div>
 							<div class="col-md-4 col-sm-6 logo-block">
-								<a href="#"><img src="images/logo.png" alt="logo" /></a>
+								<a href="index.php"><img src="images/logo.png" alt="logo" /></a>
 							</div>
 
                             <div class="col-md-4 col-sm-6 col-xs-6 login-n-switch">
@@ -106,6 +135,7 @@
 
                                     <a href="http://localhost/tcs/userlogin/logout.php"><button type="button" class="btn-outline-dark">Logout</button></a>
                                     <a href="http://localhost/tcs/news/user.php"><button type="button" class="btn-outline-dark">History</button></a>
+                                    <a href="http://localhost/tcs/news/useraddnews.php"><button  class="btn-outline-dark"> Add News </button></a>
                                     <?php
                                 }
                                 ?>
@@ -179,9 +209,9 @@
 									<ul class="dropdown-menu">				
 										<li><a href="world.php" title="World">World</a></li>
 										<li><a href="nepal.php" title="Nepal">Nepal</a></li>
-										<li><a href="Finance.php" title="Finance">Finance</a></li>
+										<li><a href="finance.php" title="Finance">Finance</a></li>
 										<li><a href="sports.php" title="Sports">Sports</a></li>
-										<li><a href="Business.php" title="Business">Business</a></li>
+										<li><a href="business.php" title="Business">Business</a></li>
 										
 									</ul>
 								</li>
@@ -228,12 +258,12 @@
 <main class="maan">
     <h1>Calculate Vehicle Tax</h1>
     <form class="form" method="post" action="vehicle-tax.php">
-    <div>
-
-        <label class="stus">Select Vehicle Type:</label>
-
-
-            <label class="stu">Select your Pradesh:</label>
+    <div> 
+        
+        <label class="stus">Select Vehicle Type:</label>    
+        
+        
+            <label class="stu">Select your Pradesh:</label> 
             <br>
             <select class="spacee" name= "vehicle" placeholder="vehicle">
             <option value= "1"> Bike </option>
@@ -246,23 +276,23 @@
                 <option value= "5"> Lumbini </option>
                 <option value= "6"> Karnali </option>
                 <option value= "7"> Sudur Paschim </option>
-
+                
             </select>
             <br>
+            <label class="s">Select Fiscal Year:</label>
+            
+            <label class="stu">Enter your Vehicle CC: </label><br>
 
-
-        <label class="stu" style="margin-left: -16px;">Enter your Vehicle CC: </label><br>
-            <select name= "cc" placeholder="cc">
-                <option value= "a"> 0-125 </option>
-                <option value= "b"> 126-160 </option>
-                <option value= "c"> 161-250 </option>
-                <option value= "d"> 251-400 </option>
-                <option value= "e"> 401-650 </option>
-                <option value= "f"> 651-more </option>
+            <select class="spaceee" name= "fy" placeholder="fy">
+                <option value= "1"> 2078/79 </option>
             </select>
+
+            <input class="side"  name = "cc" type = "number" placeholder = "eg. 150" >
+        
+
         <div class="stu"> 
-            <button type="submit" class="rest" name="Reset"> Reset</button>
-            <button type="submit" class="calcu" name="Calculate"> Calculate</button>
+            <button class="rest" name="Reset"> Reset</button>   
+            <button class="calcu" name="Calculate"> Calculate</button>
         </div>
         <div class="tala">
             <label>Tax Amount:</label><br><input name = "amount" type = "text" placeholder = "" value="<?php
@@ -383,7 +413,7 @@
 							<!-- About Widget -->
 							<div class="ftr-widget ftr_widget_about">
 								<h3>ABOUT US</h3>
-								<p>A small project by L5CG4 Students</p>
+								<p>This is a project by Group 3 of L5CG4</p>
 								
 							</div><!-- About Widget /- -->
 						</div><!-- Widget Block /- -->

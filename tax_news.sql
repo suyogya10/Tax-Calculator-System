@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2022 at 07:26 PM
+-- Generation Time: May 16, 2022 at 10:39 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -51,11 +51,23 @@ INSERT INTO `admin_login` (`adminid`, `fname`, `lname`, `email`, `pass`) VALUES
 --
 
 CREATE TABLE `cmts` (
-  `fname` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `comment` varchar(50) NOT NULL,
-  `newsID` int(11) NOT NULL
+  `fname` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `comment` varchar(50) DEFAULT NULL,
+  `newsID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cmts`
+--
+
+INSERT INTO `cmts` (`fname`, `email`, `comment`, `newsID`) VALUES
+('Alex Thapa', 'alex@gmail.com', 'Good to see Xavi back at work!', 12),
+('Jordan Smith', 'jordi@outlook.com', 'Barcelona are BACK!!!', 12),
+('Bimal Gharti', 'bimal@hotmail.com', 'So sad :(', 11),
+('Hari Shrestha', 'hari@gmail.com', 'Getting Scary!', 0),
+('Adarsh Ghimire', 'adarsh@gmail.com', 'Oh no so sad for Leeds!', 26),
+('Suyogya Gautam', 'suyogya@mail.com', 'GREAT JOB', 69);
 
 -- --------------------------------------------------------
 
@@ -84,29 +96,49 @@ INSERT INTO `income_rate` (`id`, `rate`) VALUES
 
 CREATE TABLE `news` (
   `newsID` int(11) NOT NULL,
-  `newsHead` varchar(200) NOT NULL,
-  `newsBody` mediumtext NOT NULL,
+  `newsHead` longtext NOT NULL,
+  `newsBody` longtext NOT NULL,
   `newsCategory` varchar(200) NOT NULL,
-  `newsTime` datetime NOT NULL DEFAULT current_timestamp()
+  `newsTime` datetime NOT NULL DEFAULT current_timestamp(),
+  `photo` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`newsID`, `newsHead`, `newsBody`, `newsCategory`, `newsTime`) VALUES
-(1, 'Piles of garbage litter valley roads yet again', 'A group of local leaders, who were canvasing door-to-door for the upcoming election at Tinkune area of Kathmandu, were lambasted by irate locals for their failure to take initiative in managing garbage accumulated on the road side.It has been at least 10 days that Kathmandu Metropolitan City has not transported garbage to the landfill site in Nuwakot. Piles of waste accumulated on roadsides inside the core urban areas of Kathmandu have become a common sight.This is the third time in the last three months that the roads in the valley have been littered with garbage.The main reason for obstruction of waste transportation is the blockade of Mudku-Tinpiple road section of Pasang Lhamu Highway on the way to Sisdole.Locals have once again started obstructing vehicles ferrying waste materials.They have been demanding that the damaged road section of the highway be upgraded for the last seven years.The Balaju-Trishuli road segment has been in a dilapidated condition for around eight years now, while the Mudku-Tinpiple road segment is even worse.With rainfall in the area in the last two weeks, the road condition has worsened.\"We trusted the authorities and waited for such a long time.But, we won\'t allow vehicles ferrying waste unless our demand is met,\" Sundar Neupane of the area told The Himalayan Times.The authorities concerned are least bothered about improving roads. Locals have demanded that the government at least start construction work.\"All these years we have received assurances but this time we want action,\" Neupane said.Kathmandu Metropolitan City has the responsibility of ferrying waste products to the Sisdole landfill site.However, it has been saying that road construction falls under the jurisdiction of Department of Roads under the federal government. The road construction project is being undertaken by Sailung Construction, which has often promised the KMC it will upgrade the road section on time, but precious little has happened.Sarkar Raj Shrestha Sisdole l', 'Nepal', '2022-05-04 10:51:19'),
-(2, 'Russia says it disables Ukrainian railway stations used to transport Western weapons', 'Russia\'s defence ministry said on Wednesday that it had disabled six railway stations in Ukraine used to supply Ukrainian forces with Western-made weapons in the country\'s east.The ministry said it disabled the railways stations by bombing their power supplies using high-precision air and sea-based weapons. It did not say which Western-made weapons were supplied to Ukrainian forces via those stations.Reuters could not immediately verify the statement and there was no immediate reaction from Kyiv. The ministry also said it had hit 40 Ukrainian military targets, including four depots storing ammunition and artillery weapons.', 'World', '2022-05-04 10:51:58'),
-(3, 'Domestic flights at TIA back into service', 'Domestic flights were obstructed for one hour this morning at Tribhuvan International Airport (TIA) here following a hoax that a suspicious object was spotted in the internal terminal building.TIA office said that domestic flights have resumed as no such object was found at the building after a search operation carried out by a bomb disposal squad. The airport which was stalled following the bomb hoax has been opened a while ago, TIA General Manager Prem Nath Thakur said. Passengers inside the domestic terminal building were evacuated after the hoax.', 'Nepal', '2022-05-04 10:52:21'),
-(4, 'Tourist arrivals rebounded strongly last month', 'Nepal\'s international tourist arrivals soared by 159.9 per cent year-on-year to 58,348 last month, according to the data unveiled by the Nepal Tourism Board today.The country had welcomed 22,450 tourists in the same month last year. Similarly, 52,663 tourists left the country in the review month.A total of 22,477 Indian tourists entered Nepal last month, which was an increase of 70.3 per cent compared to thenumber of Indian nationals who had visited Nepal in April of 2021.Similarly, the country received 1,537 tourists from Bangladesh, 204 from Pakistan, 244 from Sri Lanka and 86 from Bhutan.Of the total international tourists who entered Nepal last month, 42.7 per cent were from the SAARC countries, as per the NTB.', 'Business', '2022-05-04 10:52:52'),
-(5, 'Rahul Gandhi in Nepal to attend wedding of former CNN journo', 'After a video of Rahul Gandhi, former president of Indian National Congress and a member of Parliament, showing him partying at a night club in Kathmandu went viral, the Congress party has clarified that Rahul was in Nepal to attend the wedding of his friend Sumnima Udas.Sumnima, who was a journalist with CNN, is the daughter of Ambassador of Nepal to Myanmar Bhim Udas. She is getting married to Nima Martin Sherpa, a Nepali businessman based in China.The video created a buzz in India after Amit Malviya, the head of the Bharatiya Janata Party\'s information and technology department, put it on Twitter.When asked about Gandhi\'s whereabouts, Congress communication department head Randeep Surjewala told reporters, \"Rahul Gandhi has not gone as an uninvited guest like Prime Minister Modi went to Pakistan to celebrate birthday and cut cakes for the then Pakistan PM Nawaz Sharif. Rahul Gandhi has gone to a friendly country Nepal to participate in a private marriage function of a friend. By chance, the friend also happens to be a journalist. So I think they are also abusing your fraternity.\"', 'Nepal', '2022-05-04 12:40:01'),
-(6, 'Heavy rain and floods in Afghanistan kill 22, destroy hundreds of homes', 'Heavy rain and flooding has killed 22 people, destroyed hundreds of homes and damaged crops in Afghanistan, which is already facing a humanitarian crisis, a disaster management official said on Thursday.The Taliban government, struggling to cope with the disaster that has affected more than a third of its provinces, will approach international relief organisations for help, officials said. \"Due to flooding and storms in 12 provinces, 22 people have died and 40 injured,\" said Hassibullah Shekhani, head of communications and information at Afghanistan\'s National Disaster Management Authority.The rain and flooding was particularly severe in the western provinces of Badghis and Faryab and the northern province of Baghlan.Afghanistan has been suffering from drought in recent years, made worse by climate change, with low crop yields raising fears of serious food shortages.The weather has exacerbated problems of poverty caused by decades of war and then a drop in foreign aid and the freezing of assets abroad after the Taliban took over, and U.S.-led forces withdrew, in August.', 'World', '2022-05-05 09:56:43'),
-(7, 'Survivor found almost 6 days after China building collapse', 'Rescuers in central China have pulled a woman alive from the rubble of a building that partially collapsed almost six days earlier, state media reported Thursday.The unidentified woman is the 10th survivor of the disaster in the city of Changsha, in which at least five people have died and an unknown number, possibly dozens, are still missing. She was rescued shortly after midnight on Thursday, about 132 hours after the rear of the six-story building suddenly caved in on April 29, the official Xinhua News Agency reported.The woman was conscious and advised rescuers on how to pull her out without causing further injury, Xinhua said. Teams had used dogs and hand tools as well as drones and electronic life detectors in the search.All the survivors were reportedly in good condition after having been treated in a hospital. Intermittent rain showers in recent days may have increased their chances of survival without food or water.At least nine people have been arrested in relation to the collapse of what Xinhua has described as a \"self-built building,\" including its owner, on suspicion of ignoring building codes or committing other violations.', 'World', '2022-05-05 09:57:38'),
-(8, 'Audits should be dignified and professional: FinMin', 'Finance Minister Janardan Sharma Prabhakar has stressed the necessity of dignified and professional audits for strengthening the economy.Addressing the first National Accountants\' Conference organised by the Institute of Chartered Accountants of Nepal (ICAN) here, Minister Sharma said that the auditors should be focused on the obligation ofaccurate accounting of all assets. He urged the auditors to pay attention to auditing of any business or property as it impacts the national economy.\"If an auditor miscalculates while auditing, it will not only impact the accounts, but also the national economy. So I request you all to be cautious while auditing.\"He said that the audit business was the backbone as well as the mirror of the economy.The audit sector has played a significant role in all sectors - private, government and non-government, the finance minister said.\"The auditing business requires sincerity and a sense of responsibility.\"He said that the role of auditor would be important in maintaining financial discipline adding that audits should not be limited to the accounts of any organisation but should also be used in valuing the assets of the entire country.He called for an audit of the country\'s economy to eradicate poverty. He said that there should be an audit of all sectors for the improvement of the economy.According to him, it was time to make maximum use of local resources to make the country self-reliant.', 'Business', '2022-05-05 09:58:19'),
-(9, 'Gold, silver prices dip slightly', 'The price of precious metals declined in the trading week between April 24 and 29.In the domestic market, gold price fell by Rs 1,700 per tola, while silver price slumped by Rs 40 a tola during the review week. According to the rate list of Federation of Nepal Gold and Silver Dealers Association (FeNeGoSiDA), gold price was fixed at Rs 100,500 per tola when the market opened for trading on Sunday. The price of the precious yellow metal fell by Rs 300 a tola to Rs 100,200 per tola on Monday. The gold price fell to Rs 99,300 a tola on Tuesday and to Rs 99,000 per tola on Wednesday. The precious yellow metal decreased to Rs 98,000 a tola on Thursday.On Friday, however, it recovered some of its earlier losses. The price of yellow metal increased by Rs 1,200 per tola to close the week at Rs 99,200 a tola on the last trading day. Similarly, silver was traded at Rs 1,360 a tola on Sunday.', 'Business', '2022-05-05 10:01:08'),
-(10, 'Djokovic stays perfect against Monfils, Raducanu knocked out in Madrid', 'World number one Novak Djokovic began his quest for a fourth Madrid Open title with a 6-3 6-2 victory over Gael Monfils on Tuesday, improving his unbeaten record to 18-0 against the Frenchman.The result ensures Djokovic remains at the top of the rankings while it earned Monfils the ignominy of having the worst record against a single opponent without winning in the Open era. \"I would probably rate it as the best performance of the year,\" Djokovic told reporters. \"I felt very good on the court. (The rain) interruption probably helped me a bit more than him.\"I played one of the most athletic and quickest players that we have in the game, Gael... I know I have to always be ready that another ball will always come back from his part of the court.', 'Sports', '2022-05-05 10:01:54'),
-(11, '\'We were asked to leave camp time and again\'', 'A group of 10 footballers who walked off the national team camp on Tuesday accused head coach Abdullah Almutairi of creating an ugly scenario out of nothing.\"It was not a big issue and we just wanted proper accommodation during the national team training,\" said the footballers at a press meet today. \"Rohit Chand was expelled from the camp for raising the voice on our behalf and we wanted to talk to the coach on the issue. But he asked us to leave the camp time and again apart from threatening us with bringing in new players in our place instead of resolving the issue,\" they said.Chand, Sujal Shrestha, Ananta Tamang, Bimal Gharti Magar, Anjan Bista, Bishal Shrestha, Bishal Rai, Dinesh Rajbanshi, Tej Tamang and Suman Lama had left the team hotel on Tuesday night after coach Almutairi issued the order.', 'Sports', '2022-05-05 10:02:17'),
-(12, 'Xavi urges Barcelona to find motivation to finish second in LaLiga', 'Barcelona are a team that are used to finishing in first place but now must find the motivation to ensure they end the season second behind arch rivals Real Madrid in LaLiga, manager Xavi said.Barca\'s 1-0 defeat to Rayo Vallecano at the Camp Nou on Sunday marked the first time the club had lost three straight home games and all but sealed the league for rivals Real Madrid.Real Madrid now need only one point from their last five games to secure the title, while Barcelona are second on 63 points, level with Sevilla. Barcelona were also eliminated from the Europa League earlier this month.\"We were all fired up with the great run in the league and the Europa League,\" Xavi told reporters.', 'Sports', '2022-05-05 10:02:45');
+INSERT INTO `news` (`newsID`, `newsHead`, `newsBody`, `newsCategory`, `newsTime`, `photo`) VALUES
+(59, 'Indian PM Modi arriving in Lumbini today', 'Prime Minister of India Narendra Modi issued departure statement a day before landing in Lumbini, the birth place of Gautam Budhha saying India\'s ties with Nepal are \'unparalleled.\' The Indian PM is visiting Lumbini on the occasion of Buddha Purnima at the invitation of Nepal\'s Prime Minister Sher Bahadur Deuba.Modi said in his statement that he was looking forward to meeting his Nepali counterpart Deuba again after their \'productive\' discussions during Deuba\'s visit to India last month. He stated, \"We will continue to build on the shared understanding to expand cooperation in multiple areas, including in hydropower, development and connectivity.\" He said India-Nepal ties were unparalleled. \"The civilisational and people-to-people contacts between India and Nepal form the enduring edifice of our close relationship,\" Modi said in his statement. \"My visit is intended to celebrate and further deepen these time-honoured linkages that have been fostered through centuries and recorded in our long history of intermingling,\" he said. He added that he was looking forward to offering prayers at the Mayadevi temple on the auspicious occasion of Buddha Jayanti.\"I am honoured to follow in the footsteps of millions of Indians to pay reverence at the sacred site of Lord Buddha\'s birth,\" Modi said.PM Modi and PM Deuba will hold talks in Lumbini on further expanding cooperation in multi-ple areas including hydropower and connectivity.\"We will continue to build on our shared understanding to expand cooperation in multiple areas, including in hydropower, development and connectivity,\" he added.Modi will also participate in the foundation laying ceremony for the construction of a centre for Buddhist culture and heritage in Lumbini.Modi said he would also attend celebrations to mark the occasion of Buddha Jayanti, organised by the government of Nepal.', 'Nepal', '2022-05-16 09:29:26', 'tax_modi.jpg'),
+(60, 'Don\'t argue over minor human error while vote counting: EC', 'The Election Commission has urged the bodies concerned not to make a minor human error during the counting of votes an issue of dispute.The Election Commission has said its attention has been drawn towards incidents of halting the counting process, mobbing, shouting and causing delay in the entire counting process over unnecessary disputes. The latest untoward scenario during the counting process has its impact on the plan of the Election Commission to complete the process before May 19, according to the Election Commission. In a press statement today, EC Spokesperson Shaligram Sharma Poudel has sought to speed up the counting process with the management of required human resources by coordinating with the district-based Human Resources Management Coordination Committee.It has sought the mobilisation of government, including the province government employees, in counting with priority on the basis of their availability and to ensure more and more counting teams on the ground of availability of space in the counting venues.', 'Nepal', '2022-05-16 09:30:20', 'tax_ec.jpg'),
+(61, 'India open to exporting wheat to needy nations despite ban', 'India on Sunday said it would keep a window open to export wheat to food-deficit countries at the government level despite restrictions announced two days earlier.India\'s Commerce Secretary B.V.R. Subrahmanyam told reporters the government will also allow private companies to meet previous commitments to export nearly 4.3 million tons of wheat until July. India exported 1 million tons of wheat in April. India mainly exports wheat to neighboring countries like Bangladesh, Nepal and Sri Lanka.A notice in the government gazette by the Directorate of Foreign Trade on Friday said a spike in global prices for wheat was threatening the food security of India and neighboring and vulnerable countries.A key aim of restrictions on exports is to control rising domestic prices. Global wheat prices have risen by more than 40% since the beginning of the year.Before the war, Ukraine and Russia accounted for a third of global wheat and barley exports. Since Russia\'s Feb. 24 invasion, Ukraine\'s ports have been blocked and civilian infrastructure and grain silos have been destroyed.', 'World', '2022-05-16 09:30:46', 'tax_indiaban.jpg'),
+(62, 'Sweden\'s ruling party poised to back NATO bid', 'Sweden\'s ruling Social Democrats were poised on Sunday to come out in favour of the country joining NATO, paving the way for an application soon after and abandoning decades of military non-alignment in the wake of Russia\'s invasion of Ukraine.A distant prospect only months ago, Russia\'s attack on its smaller neighbour has seen both Sweden and Finland rethink their security needs and move to seek out safety in the alliance they stood apart from throughout the long years of the Cold War. The war in Ukraine, which Moscow calls a special military operation but which has already killed thousands and displaced millions, shattered long-standing security policies and fuelled a wave of public support for NATO membership in both countries.Prime Minister Magdalena Andersson\'s Social Democrats, the biggest party in every election for the past century, has held internal debates over the past week over dropping a long-standing opposition to NATO membership.', 'World', '2022-05-16 09:31:09', 'tax_swed.jpg'),
+(63, 'Nepse index surges nearly 5pc', 'The Nepal Stock Exchange (Nepse) index recuperated the nearly five per cent loss of previous week by advancing 4.99 per cent or 111.80 points over the trading period between May 8 and 12.The sensitive index, which measures performance of class \'A\' stocks, increased by 4.95 per cent or 21.41 points to 453.96 points. Similarly, the float index that gauges performances of shares actually traded also rose by 5.12 per cent to 160.69 points. Altogether 20.55 million shares were traded duringthe trading week through 160,262 transactions that amounted to Rs 8.56 billion.The weekly turnover was more than 97 per cent higher than the preceding week when 12.25 million shares had changed hands through 93,229 transactions that totalled Rs 4.34 billion.However, it is to be noted that the share market had remained closed for two days due to public holidays in the previous week against the normal five days in the review week.Nevertheless, the average daily turnover also rose by over 18 per cent during the review period.The average daily turnover in the past week was Rs 1.44 billion and it increased to Rs 1.71 billion this week.', 'Business', '2022-05-16 09:32:00', 'tax_npse.jpg'),
+(64, 'Samsung in talks to hike chipmaking prices by up to 20%: Bloomberg', 'Samsung Electronics 005930.KS is in talks with clients about hiking prices for chip contract manufacturing by up to 20% this year, Bloomberg reported on Friday.The move is part of an industry-wide push to raise prices to cover rising materials and logistics costs, Bloomberg said, citing people familiar with the matter. Samsung did not have an immediate comment.Samsung Electronics is the world\'s second-largest chip contract manufacturer, after Taiwan Semiconductor Manufacturing Co (TSMC) 2330.TW.TSMC has forecast an up to 37% jump in current-quarter sales, saying it expects chip capacity to remain very tight this year amid a global chip crunch that has kept order books full and allowed chipmakers to charge premium prices.Samsung said in an earnings call in late April that major customers\' demand for its chip contract manufacturing was greater than its available capacity, and it expected the supply shortage to continue.', 'World', '2022-05-16 09:32:52', 'tax_samsu.jpg'),
+(65, 'Kane penalty sends Spurs into top four with win over Burnley', 'A contested Harry Kane penalty gave Tottenham Hotspur a 1-0 Premier League win over relegation-threatened Burnley on Sunday, moving Antonio Conte\'s team into a Champions League qualification place.Spurs climbed above North London rivals Arsenal into fourth on 68 points from 37 games -- the Gunners are on 66 from 36 matches and can return to the top four if they win at Newcastle United on Monday. Burnley, under caretaker manager Mike Jackson, went into the game in 17th place and will slip back into the bottom three if Leeds United avoid defeat at home to Brighton & Hove Albion.', 'World', '2022-05-16 09:33:14', 'tax_kane.jpg'),
+(66, 'Man City fight back to draw at West Ham', 'Manchester City fought back from 2-0 down to draw 2-2 with West Ham United on Sunday but the Premier League leaders dropped two points in the title race.With Liverpool playing at Southampton on Tuesday, City had the chance to open a six-point lead at the top but the draw at the London Stadium meant they moved four points above Liverpool, with one game left. West Ham\'s Jarrod Bowen struck twice in the first half but Jack Grealish pulled one back for City early in the second half before Vladimir Coufal scored an own goal. Riyad Mahrez missed a golden chance to seal a City win after he missed a late penalty.After City defender Oleksandr Zinchenko lost track of Bowen, the West Ham forward raced on to Pablo Fornals\' pass over the top and took it round goalkeeper Ederson for a clinical finish in the 24th minute.Bowen added another in the 45th minute when Michail Antonio sent him through with a clever pass and the English forward\'s low strike from the edge of the box found the bottom corner.', 'Sports', '2022-05-16 09:34:03', 'tax_city.jpg'),
+(69, 'Balen leads right now', 'Balen is winning witj 2 votes.', 'Nepal', '2022-05-16 10:20:54', 'tax_Sport small.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `requests`
+--
+
+CREATE TABLE `requests` (
+  `request_id` int(11) NOT NULL,
+  `user_email` varchar(200) NOT NULL,
+  `newsHead` varchar(2000) NOT NULL,
+  `newsBody` varchar(2000) NOT NULL,
+  `status` int(11) NOT NULL,
+  `category` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `requests`
+--
+
+INSERT INTO `requests` (`request_id`, `user_email`, `newsHead`, `newsBody`, `status`, `category`) VALUES
+(8, 'ram@gmail.com', 'UML losing', 'UML LOSING', 0, 'Nepal');
 
 -- --------------------------------------------------------
 
@@ -139,7 +171,45 @@ INSERT INTO `tax_history` (`email`, `vehicle`, `income`, `date`) VALUES
 ('', '0', 9500, '2022-05-04'),
 ('', '0', 9500, '2022-05-04'),
 ('', '0', 9500, '2022-05-04'),
-('', '0', 9500, '2022-05-04');
+('', '0', 9500, '2022-05-04'),
+('', 'Rs 8000', 0, '2022-05-15'),
+('', 'Rs 11000', 0, '2022-05-15'),
+('', 'Rs 8000', 0, '2022-05-15'),
+('', 'Rs 8000', 0, '2022-05-15'),
+('b3khanal@gmail.com', 'Rs 2800', 0, '2022-05-15'),
+('b3khanal@gmail.com', 'Rs 2800', 0, '2022-05-15'),
+('b3khanal@gmail.com', 'Rs 5500', 0, '2022-05-15'),
+('b3khanal@gmail.com', 'Rs 4500', 0, '2022-05-15'),
+('b3khanal@gmail.com', 'Rs 2800', 0, '2022-05-15'),
+('b3khanal@gmail.com', 'Rs 2800', 0, '2022-05-15'),
+('b3khanal@gmail.com', 'Rs 2800', 0, '2022-05-16'),
+('b3khanal@gmail.com', 'Rs 2800', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('basnetraymonn@gmail.com', '0', 0, '2022-05-16'),
+('ram@gmail.com', '0', 8500, '2022-05-16');
 
 -- --------------------------------------------------------
 
@@ -161,11 +231,37 @@ CREATE TABLE `user_login` (
 --
 
 INSERT INTO `user_login` (`uid`, `fname`, `lname`, `email`, `pass`, `otp`) VALUES
-(3, 'Ashim', 'Baral', 'ashim@mail.com', 'e2fc714c4727ee9395f324cd2e7f331f', 502642),
-(7, 'Suyogya', 'Gautam', 'suyogya@mail.com', '202cb962ac59075b964b07152d234b70', 11729),
-(12, 'Ashim', 'Baral', 'reachashim@gmail.com', '202cb962ac59075b964b07152d234b70', 874286),
-(13, 'Suyogya', 'Gautam', 'gsuyogya@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
-(14, 'Biraj', 'Dulal', 'biraj.dulal@heraldcollege.edu.np', '5d41402abc4b2a76b9719d911017c592', 525994);
+(14, 'Biraj', 'Dulal', 'biraj.dulal@heraldcollege.edu.np', '5d41402abc4b2a76b9719d911017c592', 525994),
+(18, 'Ashim', 'Baral', 'reachashim@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(19, 'Suyogya', 'Gautam', 'gsuyogya@gmail.com', '202cb962ac59075b964b07152d234b70', 0),
+(22, 'adarsh', 'ghimire', 'b3khanal@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 0),
+(23, 'Raymon', 'Basnet', 'basnetraymonn@gmail.com', '144b200f48a8a96f8adb1546ff3b8931', 0),
+(24, '', '', 'suyogya@mail.com', '202cb962ac59075b964b07152d234b70', 0),
+(25, 'Ram', 'Thapa', 'abc', '202cb962ac59075b964b07152d234b70', 0),
+(26, 'ram', 'thapa', 'ram@gmail.com', '202cb962ac59075b964b07152d234b70', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vehicle_tax`
+--
+
+CREATE TABLE `vehicle_tax` (
+  `vehicle_id` int(11) NOT NULL,
+  `province` varchar(200) NOT NULL,
+  `range_cc` varchar(200) NOT NULL,
+  `price` varchar(200) NOT NULL,
+  `moto_type` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `vehicle_tax`
+--
+
+INSERT INTO `vehicle_tax` (`vehicle_id`, `province`, `range_cc`, `price`, `moto_type`) VALUES
+(20, 'Province 1', '0-125', '2000', 'BIKE'),
+(22, 'Bagmati', '0-150', '100', 'BIKE'),
+(23, 'Province 1', '151-250', '8000', 'BIKE');
 
 --
 -- Indexes for dumped tables
@@ -184,10 +280,22 @@ ALTER TABLE `news`
   ADD PRIMARY KEY (`newsID`);
 
 --
+-- Indexes for table `requests`
+--
+ALTER TABLE `requests`
+  ADD PRIMARY KEY (`request_id`);
+
+--
 -- Indexes for table `user_login`
 --
 ALTER TABLE `user_login`
   ADD PRIMARY KEY (`uid`);
+
+--
+-- Indexes for table `vehicle_tax`
+--
+ALTER TABLE `vehicle_tax`
+  ADD PRIMARY KEY (`vehicle_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -203,13 +311,25 @@ ALTER TABLE `admin_login`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `newsID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `newsID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+
+--
+-- AUTO_INCREMENT for table `requests`
+--
+ALTER TABLE `requests`
+  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user_login`
 --
 ALTER TABLE `user_login`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `vehicle_tax`
+--
+ALTER TABLE `vehicle_tax`
+  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
